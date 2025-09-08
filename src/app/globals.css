@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* カラー */
+  --color-black: #393939;
+  --color-white: #ffffff;
+  --color-light-bg: #ececec;
+  --color-dark-bg: #222222;
+  --color-red: #e84f36;
+  --color-blue: #366be8;
+  --color-gray01: #cecece; /* LightMode Article Line */
+  --color-gray02: #555555; /* DarkMode Article Line */
+  --color-mh-white: rgba(255, 255, 255, 0.5);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* フォントサイズ */
+  font-size: clamp(10px, 1.111vw, 16px);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --fs-xxs: 0.625rem; /* 10px */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.875rem; /* 14px */
+  --fs-base: 1rem; /* 16px */
+  --fs-lg: 1.5rem; /* 24px */
+  --fs-xl: 2.5rem; /* 40px */
+  --fs-xxl: 5.5rem; /* 88px */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* フォントファミリー */
 }
