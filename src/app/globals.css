@@ -1,27 +1,41 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  /* カラー */
+@theme {
+  /* Colors */
   --color-black: #393939;
   --color-white: #ffffff;
-  --color-light-bg: #ececec;
-  --color-dark-bg: #222222;
-  --color-red: #e84f36;
-  --color-blue: #366be8;
   --color-gray01: #cecece; /* LightMode Article Line */
   --color-gray02: #555555; /* DarkMode Article Line */
   --color-mh-white: rgba(255, 255, 255, 0.5);
 
-  /* フォントサイズ */
+  /* Font Sizes */
+  --text-xxs: 0.625rem; /* 10px */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.5rem; /* 24px */
+  --text-xl: 2.5rem; /* 40px */
+  --text-xxl: 5.5rem; /* 88px */
+
+  /* Font Families */
+  --font-primary: var(--font-work-sans);
+  --font-secondary: var(--font-shippori-mincho);
+  --font-tertiary: var(--font-bodoni-moda);
+  --font-quaternary: var(--font-dnp-shuei);
+}
+
+@layer base {
+  :root {
+    --color-bg: #ececec;
+    --color-primary: #e84f36;
+  }
+  .dark {
+    --color-bg: #222222;
+    --color-primary: #366be8;
+  }
+}
+
+:root {
   font-size: clamp(10px, 1.111vw, 16px);
-
-  --fs-xxs: 0.625rem; /* 10px */
-  --fs-xs: 0.75rem; /* 12px */
-  --fs-sm: 0.875rem; /* 14px */
-  --fs-base: 1rem; /* 16px */
-  --fs-lg: 1.5rem; /* 24px */
-  --fs-xl: 2.5rem; /* 40px */
-  --fs-xxl: 5.5rem; /* 88px */
-
-  /* フォントファミリー */
 }
