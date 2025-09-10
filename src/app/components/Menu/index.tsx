@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Menu() {
   const renderMenuItem = (item: MenuItem) => (
-    <li key={item.id} className="block">
+    <li key={item.id} className="inline">
       <Link
         href={item.href}
         className="text-[var(--color-primary)] text-base tracking-[0.05rem] leading-none"
@@ -15,7 +15,7 @@ export default function Menu() {
   );
 
   return (
-    <nav className="flex justify-center items-center fixed gap-[173px] right-[60px] bottom-[64px]">
+    <nav className="flex justify-center items-center fixed gap-[173px] right-[60px] bottom-[40px]">
       <ul className="flex justify-center items-center gap-[186px]">
         {menuItems.slice(0, 3).map(renderMenuItem)}
       </ul>

@@ -3,10 +3,12 @@
 
 @theme {
   /* Colors */
-  --color-black: #393939;
-  --color-white: #ffffff;
-  --color-gray01: #cecece; /* LightMode Article Line */
-  --color-gray02: #555555; /* DarkMode Article Line */
+  --color-primary: var(--color-primary);
+  --color-bg: var(--background-color);
+  --color-primary-black: #393939;
+  --color-primary-white: #ffffff;
+  --color-primary-gray: #cecece; /* LightMode Article Line */
+  --color-secondary-gray: #555555; /* DarkMode Article Line */
   --color-mh-white: rgba(255, 255, 255, 0.5);
 
   /* Font Sizes */
@@ -27,11 +29,11 @@
 
 @layer base {
   :root {
-    --color-bg: #ececec;
+    --background-color: #ececec;
     --color-primary: #e84f36;
   }
   .dark {
-    --color-bg: #222222;
+    --background-color: #222222;
     --color-primary: #366be8;
   }
 }
