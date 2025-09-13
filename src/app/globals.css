@@ -36,6 +36,9 @@
     --background-color: #222222;
     --color-primary: #366be8;
   }
+  img {
+    width: 100%;
+  }
 }
 
 :root {

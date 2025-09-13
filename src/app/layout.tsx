@@ -33,7 +33,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="fixed inset-0 m-auto bg-bg border-10 border-[var(--color-primary)] border-solid w-full h-lvh grid grid-cols-12 grid-rows-12 gap-x-[50px] gap-y-[20px] px-[50px] py-[40px] items-start">
+          <div className="fixed inset-0 m-auto bg-bg border-10 border-[var(--color-primary)] border-solid w-full h-lvh grid grid-cols-12 gap-x-[3.5vw] px-[3.5vw] py-[5.13vh] items-start">
             <HomeTitle />
             <ThemeToggle />
             {children}
