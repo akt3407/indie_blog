@@ -1,17 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 
 export default function HomeTitle() {
-  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const { theme } = useTheme();
-
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted || !theme) return null;
 
   // ページ判定
   const isHome = pathname === "/";
