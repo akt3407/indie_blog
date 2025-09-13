@@ -37,10 +37,14 @@ export default function RootLayout({
             <HomeTitle />
             <ThemeToggle />
             {children}
-            <p className="fixed left-[60px] bottom-[50px] text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none">
-              ( version_1.0.0 )
-            </p>
-            <Menu />
+            <div className="absolute flex justify-between items-end w-[91.8vw] bottom-[5.13vh] left-[3.5vw]">
+              <div>
+                <p className="text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none">
+                  ( version_1.0.0 )
+                </p>
+              </div>
+              <Menu />
+            </div>
           </div>
         </ThemeProvider>
       </body>

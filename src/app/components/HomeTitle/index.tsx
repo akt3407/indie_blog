@@ -26,8 +26,8 @@ export default function HomeTitle() {
 
   return (
     <>
-      <div className="col-start-1 col-end-9 row-start-1 row-end-4 w-[54.7vw]">
-        <picture className="block">
+      <div className="col-start-1 col-end-9 w-[54.7vw]">
+        <picture>
           <source srcSet={imgPC} />
           <img src={imgPC} alt="Title Logo" />
         </picture>
