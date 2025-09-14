@@ -19,7 +19,6 @@ export const bodoniModa = Bodoni_Moda({
   display: "swap",
 });
 
-// DNP秀英ゴシック銀
-export const dnpShuei = {
-  variable: "--font-dnp-shuei",
-};
+// DNP秀英ゴシック銀 (Adobe Fonts)
+// Adobe Fontsは外部スクリプトで読み込まれるため、CSS変数は不要
+export const dnpShueiGothicGinstd = "dnp-shuei-gothic-gin-std";

@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { workSans, shipporiMincho, bodoniModa } from "./lib/fonts";
+import {
+  workSans,
+  shipporiMincho,
+  bodoniModa,
+  dnpShueiGothicGinstd,
+} from "./lib/fonts";
 import ThemeProvider from "@/theme/theme-provider";
 
 import "./globals.css";
 import Menu from "./components/Menu";
 import HomeTitle from "./components/HomeTitle";
 import ThemeToggle from "@/theme/theme-toggle";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "BLooooG",
@@ -23,9 +29,6 @@ export default function RootLayout({
       className={`${workSans.variable} ${shipporiMincho.variable} ${bodoniModa.variable}`}
       suppressHydrationWarning={true}
     >
-      <head>
-        <link rel="stylesheet" href="https://use.typekit.net/nns4ucs.css" />
-      </head>
       <body className="font-primary relative">
         <ThemeProvider
           attribute="class"
@@ -47,6 +50,18 @@ export default function RootLayout({
             </div>
           </div>
         </ThemeProvider>
+        <Script id="adobe-fonts" strategy="beforeInteractive">
+          {`
+            (function(d) {
+              var config = {
+                kitId: 'nns4ucs',
+                scriptTimeout: 3000,
+                async: true
+              },
+              h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\\bwf-loading\\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+            })(document);
+          `}
+        </Script>
       </body>
     </html>
   );

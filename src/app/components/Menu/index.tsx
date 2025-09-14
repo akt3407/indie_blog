@@ -56,7 +56,7 @@ export default function Menu() {
             <>
               {/* オーバーレイ */}
               <div
-                className="fixed inset-0 bg-white/10 backdrop-blur-[1px] z-40"
+                className="fixed inset-0 bg-white/50 backdrop-blur-[3px] z-40"
                 onClick={handleOverlayClick}
               />
               {/* メニューコンテンツ */}

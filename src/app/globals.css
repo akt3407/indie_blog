@@ -23,7 +23,7 @@
   --font-primary: var(--font-work-sans);
   --font-secondary: var(--font-shippori-mincho);
   --font-tertiary: var(--font-bodoni-moda);
-  --font-quaternary: var(--font-dnp-shuei);
+  --font-quaternary: "dnpShueiGothicGinstd";
 }
 
 @layer base {

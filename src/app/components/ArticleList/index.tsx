@@ -40,11 +40,11 @@ export default function ArticleList() {
                 <span className="text-base text-[var(--color-text-primary)] leading-[1.3]">
                   2025-00-00
                 </span>
-                <p className="text-xxs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light">
+                <button className="text-xxs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light">
                   #勉強記録
-                </p>
+                </button>
               </dt>
-              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem]">
+              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
               </dd>
             </dl>
@@ -61,7 +61,7 @@ export default function ArticleList() {
                   #勉強記録
                 </p>
               </dt>
-              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem]">
+              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
               </dd>
             </dl>
@@ -78,7 +78,7 @@ export default function ArticleList() {
                   #勉強記録
                 </p>
               </dt>
-              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem]">
+              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
               </dd>
             </dl>
@@ -95,7 +95,7 @@ export default function ArticleList() {
                   #勉強記録
                 </p>
               </dt>
-              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem]">
+              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
               </dd>
             </dl>
@@ -112,7 +112,7 @@ export default function ArticleList() {
                   #勉強記録
                 </p>
               </dt>
-              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem]">
+              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
               </dd>
             </dl>
@@ -129,8 +129,8 @@ export default function ArticleList() {
                   #勉強記録
                 </p>
               </dt>
-              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem]">
-                日記のタイトルが入ります。
+              <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
+                日記のタイトルが入ります。日記のタイトルが入ります。日記のタイトルが入ります。
               </dd>
             </dl>
           </Link>
