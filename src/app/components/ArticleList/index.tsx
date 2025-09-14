@@ -37,10 +37,10 @@ export default function ArticleList() {
           <Link href="/" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
-                <span className="text-base text-[var(--color-text-primary)] leading-[1.3]">
+                <span className="text-base text-[var(--color-text-primary)] leading-[0.83]">
                   2025-00-00
                 </span>
-                <button className="text-xxs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light">
+                <button className="text-xs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light tracking-[0.05rem]">
                   #勉強記録
                 </button>
               </dt>
@@ -54,12 +54,12 @@ export default function ArticleList() {
           <Link href="/" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
-                <span className="text-base text-[var(--color-text-primary)] leading-[1.3]">
+                <span className="text-base text-[var(--color-text-primary)] leading-[0.83]">
                   2025-00-00
                 </span>
-                <p className="text-xxs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light">
+                <button className="text-xs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light tracking-[0.05rem]">
                   #勉強記録
-                </p>
+                </button>
               </dt>
               <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
@@ -71,12 +71,12 @@ export default function ArticleList() {
           <Link href="/" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
-                <span className="text-base text-[var(--color-text-primary)] leading-[1.3]">
+                <span className="text-base text-[var(--color-text-primary)] leading-[0.83]">
                   2025-00-00
                 </span>
-                <p className="text-xxs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light">
+                <button className="text-xs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light tracking-[0.05rem]">
                   #勉強記録
-                </p>
+                </button>
               </dt>
               <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
@@ -88,12 +88,12 @@ export default function ArticleList() {
           <Link href="/" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
-                <span className="text-base text-[var(--color-text-primary)] leading-[1.3]">
+                <span className="text-base text-[var(--color-text-primary)] leading-[0.83]">
                   2025-00-00
                 </span>
-                <p className="text-xxs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light">
+                <button className="text-xs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light tracking-[0.05rem]">
                   #勉強記録
-                </p>
+                </button>
               </dt>
               <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
@@ -105,12 +105,12 @@ export default function ArticleList() {
           <Link href="/" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
-                <span className="text-base text-[var(--color-text-primary)] leading-[1.3]">
+                <span className="text-base text-[var(--color-text-primary)] leading-[0.83]">
                   2025-00-00
                 </span>
-                <p className="text-xxs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light">
+                <button className="text-xs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light tracking-[0.05rem]">
                   #勉強記録
-                </p>
+                </button>
               </dt>
               <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
                 日記のタイトルが入ります。
@@ -122,15 +122,15 @@ export default function ArticleList() {
           <Link href="/" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
-                <span className="text-base text-[var(--color-text-primary)] leading-[1.3]">
+                <span className="text-base text-[var(--color-text-primary)] leading-[0.83]">
                   2025-00-00
                 </span>
-                <p className="text-xxs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light">
+                <button className="text-xs text-white px-2 py-1 bg-[var(--color-primary)] font-quaternary rounded-xl leading-[0.9] font-light tracking-[0.05rem]">
                   #勉強記録
-                </p>
+                </button>
               </dt>
               <dd className="mt-[16px] text-lg text-[var(--color-text-primary)] font-secondary leading-[1.6] tracking-[0.2rem] truncate w-[35vw]">
-                日記のタイトルが入ります。日記のタイトルが入ります。日記のタイトルが入ります。
+                日記のタイトルが入ります。
               </dd>
             </dl>
           </Link>
