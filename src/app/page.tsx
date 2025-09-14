@@ -7,7 +7,7 @@ export default function Home() {
       <div className="absolute flex items-end gap-[16.1vw] col-start-2 col-end-9 top-[33.3vh] -mt-[2.56vh]">
         <div className="w-[44.8vw] aspect-video">
           <Image
-            src="/home_img.jpg"
+            src="/sample_img.jpg"
             alt="mv"
             width={645}
             height={362}

@@ -2,6 +2,7 @@
 
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function HomeTitle() {
@@ -30,17 +31,19 @@ export default function HomeTitle() {
           </div>
         ) : (
           <div className="w-[6.74vw]">
-            <Image
-              src={
-                theme === "dark"
-                  ? "/header_logo-dark.svg"
-                  : "/header_logo-light.svg"
-              }
-              width={97}
-              height={28}
-              loading="lazy"
-              alt="Logo"
-            />
+            <Link href="/">
+              <Image
+                src={
+                  theme === "dark"
+                    ? "/header_logo-dark.svg"
+                    : "/header_logo-light.svg"
+                }
+                width={97}
+                height={28}
+                loading="lazy"
+                alt="Logo"
+              />
+            </Link>
           </div>
         )}
       </div>

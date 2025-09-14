@@ -1,5 +1,5 @@
-export interface MenuItem {
+export type MenuItem = {
   id: string;
   label: string;
   href: string;
-}
+};

@@ -5,8 +5,7 @@
   /* Colors */
   --color-primary: var(--color-primary);
   --color-bg: var(--background-color);
-  --color-primary-black: #393939;
-  --color-primary-white: #ffffff;
+  --color-text-primary: var(--text-color);
   --color-primary-gray: #cecece; /* LightMode Article Line */
   --color-secondary-gray: #555555; /* DarkMode Article Line */
   --color-mh-white: rgba(255, 255, 255, 0.5);
@@ -31,10 +30,12 @@
   :root {
     --background-color: #ececec;
     --color-primary: #e84f36;
+    --text-color: #393939;
   }
   .dark {
     --background-color: #222222;
     --color-primary: #366be8;
+    --text-color: #ffffff;
   }
   img {
     width: 100%;
