@@ -9,7 +9,7 @@ export default function TechList() {
           <h2 className="text-xxl text-[var(--color-text-primary)] font-tertiary leading-none tracking-[0.07rem]">
             Sample
           </h2>
-          <p className="mt-6 text-base text-[var(--color-text-primary)] font-quaternary leading-[1.5] tracking-[0.07rem]">
+          <p className="mt-6 text-base text-[var(--color-text-primary)] font-quaternary leading-[1.5] tracking-[0.07rem] font-light">
             説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります説明文が入ります
           </p>
           <Link
