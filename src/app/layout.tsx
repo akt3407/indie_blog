@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import {
-  workSans,
-  shipporiMincho,
-  bodoniModa,
-  dnpShueiGothicGinstd,
-} from "./lib/fonts";
+import { workSans, shipporiMincho, bodoniModa } from "./lib/fonts";
 import ThemeProvider from "@/theme/theme-provider";
 
 import "./globals.css";
@@ -36,7 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="fixed inset-0 m-auto bg-bg border-10 border-[var(--color-primary)] border-solid w-full h-lvh grid grid-cols-12 gap-x-[3.5vw] px-[3.5vw] py-[5.13vh] items-start">
+          <div className="fixed inset-0 m-auto bg-bg border-10 border-[var(--color-primary)] border-solid w-full h-lvh grid grid-cols-12 gap-x-[3.5vw] px-[3.5vw] py-[5.13vh] items-start z-[100]">
             <HomeTitle />
             <ThemeToggle />
             {children}
