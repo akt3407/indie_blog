@@ -11,7 +11,7 @@ export default function Article() {
       <div className="flex justify-center items-start gap-[7.8vw]">
         <dl className="w-[36.3vw]">
           <dt className="flex justify-start items-center gap-4">
-            <span className="text-base text-[var(--color-text-primary)] leading-[0.83]">
+            <span className="text-base text-[var(--color-text-primary)] leading-[1]">
               2025-00-00
             </span>
             <Link href="/">
