@@ -4,19 +4,17 @@ import ArticleList from "../components/ArticleList";
 export default function Page() {
   return (
     <>
-      <div className="absolute top-[120px] left-[8vw] flex justify-center items-start gap-[2.7vw]">
-        <div className="aspect-video w-[41.7vw]">
-          <Image
-            src="/sample_img.jpg"
-            alt="ブログのサムネ"
-            width={579}
-            height={327}
-            loading="lazy"
-          />
-        </div>
-        <div className="max-h-[75vh] overflow-y-auto">
-          <ArticleList />
-        </div>
+      <div className="col-start-1 col-span-6 ml-[4.58vw] relative top-[8.97vh] aspect-video w-[40.2w]">
+        <Image
+          src="/sample_img.jpg"
+          alt="ブログのサムネ"
+          width={579}
+          height={327}
+          loading="lazy"
+        />
+      </div>
+      <div className="relative top-[8.97vh] w-[40.3vw] max-h-[100vh] overflow-y-auto scrollbar-none">
+        <ArticleList />
       </div>
     </>
   );

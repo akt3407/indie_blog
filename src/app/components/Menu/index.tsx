@@ -12,7 +12,7 @@ export default function Menu() {
     <li key={item.id}>
       <Link
         href={item.href}
-        className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5]"
+        className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5] "
       >
         {item.label}
       </Link>
@@ -37,40 +37,41 @@ export default function Menu() {
   return (
     <>
       {isHome ? (
-        <nav className="flex justify-center items-end gap-[173px]">
-          <ul className="flex justify-center items-end gap-[186px]">
+        <nav className="col-start-6 col-span-7 ml-[0.97vw] flex items-end gap-[12vw]">
+          <ul className="flex justify-center items-end gap-[12.9vw]">
             {menuItems.slice(0, 3).map(renderMenuItem)}
           </ul>
-          <ul>{menuItems[3] && renderMenuItem(menuItems[3])}</ul>
+          <div className="list-none">
+            {menuItems[3] && renderMenuItem(menuItems[3])}
+          </div>
         </nav>
       ) : (
-        <div>
-          {!isMenuOpen ? (
+        <>
+          <div className="col-start-12 ml-[0.97vw]">
             <button
               className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5]"
               onClick={toggleMenu}
             >
               MENU
             </button>
-          ) : (
+          </div>
+          {isMenuOpen && (
             <>
-              {/* オーバーレイ */}
               <div
                 className="fixed inset-0 bg-white/10 backdrop-blur-[3px] z-40"
                 onClick={handleOverlayClick}
               />
-              {/* メニューコンテンツ */}
-              <div className="relative z-50">
-                <nav className="flex justify-center items-end gap-[173px]">
-                  <ul className="flex justify-center items-end gap-[186px]">
-                    {menuItems.slice(0, 3).map(renderMenuItem)}
-                  </ul>
-                  <ul>{menuItems[3] && renderMenuItem(menuItems[3])}</ul>
-                </nav>
-              </div>
+              <nav className="col-start-6 col-span-7 ml-[0.97vw] flex items-end gap-[12vw] relative z-50">
+                <ul className="flex justify-center items-end gap-[12.9vw]">
+                  {menuItems.slice(0, 3).map(renderMenuItem)}
+                </ul>
+                <div className="list-none">
+                  {menuItems[3] && renderMenuItem(menuItems[3])}
+                </div>
+              </nav>
             </>
           )}
-        </div>
+        </>
       )}
     </>
   );

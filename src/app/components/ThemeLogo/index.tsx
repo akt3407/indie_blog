@@ -7,7 +7,7 @@ export default function ThemeLogo() {
 
   if (pathname.startsWith("/nikki")) {
     return (
-      <div className="col-start-1 col-end-7 relative top-[220px]">
+      <div className="col-start-1 col-end-7 relative bottom-[2.43vh] self-start">
         <svg
           width="667"
           height="154"
@@ -44,7 +44,7 @@ export default function ThemeLogo() {
 
   if (pathname.startsWith("/tech")) {
     return (
-      <div className="col-start-1 col-end-7 relative top-[220px]">
+      <div className="col-start-1 col-end-7 relative bottom-[80px]">
         <svg
           width="601"
           height="154"
