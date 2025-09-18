@@ -40,7 +40,7 @@ export default function RootLayout({
               {children}
             </div>
           </div>
-          <div className="grid grid-cols-12 gap-x-[3.5vw] fixed justify-between items-end w-[93vw] bottom-[6.4vh] left-[3.47vw]">
+          <div className="grid grid-cols-12 gap-x-[3.5vw] fixed justify-between items-end w-[93vw] bottom-[7.8vh] left-[3.47vw]">
             <p className="col-start-1 col-span-2 text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none">
               ( version_1.0.0 )
             </p>

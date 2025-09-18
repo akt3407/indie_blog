@@ -7,10 +7,10 @@ export default function ThemeLogo() {
 
   if (pathname.startsWith("/nikki")) {
     return (
-      <div className="col-start-1 col-end-7 relative bottom-[2.43vh] self-start">
+      <div className="col-start-1 col-end-7 relative bottom-[2.43vh] self-start w-[46.3vw]">
         <svg
-          width="667"
-          height="154"
+          width="100%"
+          height="auto"
           viewBox="0 0 667 154"
           fill="var(--text-color)"
           xmlns="http://www.w3.org/2000/svg"
@@ -44,10 +44,10 @@ export default function ThemeLogo() {
 
   if (pathname.startsWith("/tech")) {
     return (
-      <div className="col-start-1 col-end-7 relative bottom-[80px]">
+      <div className="col-start-1 col-end-7 relative bottom-[2.43vh] w-[41.7vw]">
         <svg
-          width="601"
-          height="154"
+          width="100%"
+          height="auto"
           viewBox="0 0 601 154"
           fill="var(--text-color)"
           xmlns="http://www.w3.org/2000/svg"

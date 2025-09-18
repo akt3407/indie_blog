@@ -6,8 +6,7 @@
   --color-primary: var(--color-primary);
   --color-bg: var(--background-color);
   --color-text-primary: var(--text-color);
-  --color-primary-gray: #cecece; /* LightMode Article Line */
-  --color-secondary-gray: #555555; /* DarkMode Article Line */
+  --color-border: var(--border-color);
   --color-mh-white: rgba(255, 255, 255, 0.5);
 
   /* Font Sizes */
@@ -32,11 +31,13 @@
     --background-color: #ececec;
     --color-primary: #e84f36;
     --text-color: #393939;
+    --border-color: #cecece;
   }
   .dark {
     --background-color: #222222;
     --color-primary: #366be8;
     --text-color: #ffffff;
+    --border-color: #555555;
   }
   img {
     width: 100%;
