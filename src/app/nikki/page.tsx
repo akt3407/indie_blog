@@ -13,7 +13,7 @@ export default function Page() {
           loading="lazy"
         />
       </div>
-      <div className="relative top-[8.97vh] w-[41.7vw] max-h-[100vh] overflow-y-auto scrollbar-none">
+      <div className="relative pt-[8.97vh] w-[41.7vw] h-[82.5vh] overflow-y-auto scrollbar-none">
         <ArticleList />
       </div>
     </>

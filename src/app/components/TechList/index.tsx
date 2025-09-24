@@ -52,7 +52,7 @@ export default function TechList() {
           View Demo
         </Link>
       </div>
-      <div className="col-start-6 col-span-6 relative top-[8.97vh] ml-[2.2vw] w-[46vw] max-h-[100vh] overflow-y-auto scrollbar-none">
+      <div className="col-start-6 col-span-6 relative pt-[8.97vh] ml-[2.2vw] w-[46vw] h-[82.5vh] overflow-y-auto scrollbar-none">
         <div className="aspect-video">
           <Image
             src="/sample_img.jpg"
