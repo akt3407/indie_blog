@@ -51,7 +51,7 @@ const FixedContents = ({ children }: Props) => {
 
   if (pathname !== "/") {
     return (
-      <div className="fixed bg-bg w-full h-svh px-[2.77vw] py-[6.4vh]">
+      <div className="fixed bg-bg w-full h-svh px-[3.47vw] py-[7.69vh]">
         <div className="absolute top-[50%] left-7">
           <svg
             width="24"
