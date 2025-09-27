@@ -47,14 +47,16 @@ export default function Menu() {
         </nav>
       ) : (
         <>
-          <div className="col-start-12 ml-[0.97vw]">
-            <button
-              className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5]"
-              onClick={toggleMenu}
-            >
-              MENU
-            </button>
-          </div>
+          {!isMenuOpen && (
+            <div className="col-start-12 ml-[0.97vw]">
+              <button
+                className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5]"
+                onClick={toggleMenu}
+              >
+                MENU
+              </button>
+            </div>
+          )}
           {isMenuOpen && (
             <>
               <div

@@ -16,7 +16,7 @@ const FixedContents = ({ children }: Props) => {
     return (
       <>
         <div className="fixed bg-bg border-10 border-[var(--color-primary)] border-solid w-full h-svh px-[2.77vw] py-[6.4vh]">
-          <div className="absolute top-[50%] left-7">
+          <div className="absolute top-[45%] left-7">
             <svg
               width="24"
               height="72"
@@ -33,7 +33,7 @@ const FixedContents = ({ children }: Props) => {
             <ThemeToggle />
           </header>
           {children}
-          <div className="absolute top-[50%] right-7">
+          <div className="absolute top-[45%] right-7">
             <svg
               width="24"
               height="72"
@@ -52,7 +52,7 @@ const FixedContents = ({ children }: Props) => {
   if (pathname !== "/") {
     return (
       <div className="fixed bg-bg w-full h-svh px-[3.47vw] py-[7.69vh]">
-        <div className="absolute top-[50%] left-7">
+        <div className="absolute top-[45.1%] left-9.5">
           <svg
             width="24"
             height="72"
@@ -69,7 +69,7 @@ const FixedContents = ({ children }: Props) => {
           <ThemeToggle />
         </header>
         {children}
-        <div className="absolute top-[50%] right-7">
+        <div className="absolute top-[45.1%] right-9.5">
           <svg
             width="24"
             height="72"
