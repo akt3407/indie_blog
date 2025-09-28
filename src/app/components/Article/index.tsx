@@ -19,22 +19,24 @@ export default function Article() {
           日記のタイトルが入ります。
         </dd>
       </dl>
-      <div className="col-start-5 col-span-6 relative w-[44.9vw] pt-[8.97vh] ml-[4.5vw] h-[82.5vh] overflow-y-auto scrollbar-none">
-        <div className="aspect-video">
-          <Image
-            src="/sample_img.jpg"
-            alt="ブログのサムネイル"
-            width={579}
-            height={325}
-            loading="lazy"
-          />
+      <div className="col-start-5 col-span-6 relative w-[44.9vw] pt-[8.97vh] ml-[4.5vw] h-[100vh] overflow-y-auto scrollbar-none">
+        <div className="h-[150vh]">
+          <div className="aspect-video">
+            <Image
+              src="/sample_img.jpg"
+              alt="ブログのサムネイル"
+              width={579}
+              height={325}
+              loading="lazy"
+            />
+          </div>
+          <h2 className="mt-4 text-lg font-quaternary text-[var(--color-text-primary)] leading-[1.7] tracking-[0.3rem] font-medium">
+            中見出し
+          </h2>
+          <p className="mt-4 text-sm font-quaternary text-[var(--color-text-primary)] leading-[1.7] tracking-[0.3rem] font-light [font-feature-settings:'palt'_1,'pwid'_1]">
+            本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+          </p>
         </div>
-        <h2 className="mt-4 text-lg font-quaternary text-[var(--color-text-primary)] leading-[1.7] tracking-[0.3rem] font-medium">
-          中見出し
-        </h2>
-        <p className="mt-4 text-sm font-quaternary text-[var(--color-text-primary)] leading-[1.7] tracking-[0.3rem] font-light [font-feature-settings:'palt'_1,'pwid'_1]">
-          本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-        </p>
       </div>
     </>
   );

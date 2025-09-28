@@ -24,8 +24,16 @@ const FixedContents = ({ children }: Props) => {
               fill="var(--color-primary)"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M12 0V72" stroke="var(--color-primary)" />
-              <path d="M24 36L-8.49366e-07 36" stroke="var(--color-primary)" />
+              <path
+                d="M12 0V72"
+                stroke="var(--color-primary)"
+                stroke-width="0.7"
+              />
+              <path
+                d="M24 36L-8.49366e-07 36"
+                stroke="var(--color-primary)"
+                stroke-width="0.7"
+              />
             </svg>
           </div>
           <header className="grid grid-cols-[repeat(11,1fr)_auto] gap-x-[3.5vw] z-[100] fixed w-[93vw]">
@@ -41,8 +49,16 @@ const FixedContents = ({ children }: Props) => {
               fill="var(--color-primary)"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M12 0V72" stroke="var(--color-primary)" />
-              <path d="M24 36L-8.49366e-07 36" stroke="var(--color-primary)" />
+              <path
+                d="M12 0V72"
+                stroke="var(--color-primary)"
+                stroke-width="0.7"
+              />
+              <path
+                d="M24 36L-8.49366e-07 36"
+                stroke="var(--color-primary)"
+                stroke-width="0.7"
+              />
             </svg>
           </div>
         </div>
@@ -60,8 +76,16 @@ const FixedContents = ({ children }: Props) => {
             fill="var(--color-primary)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M12 0V72" stroke="var(--color-primary)" />
-            <path d="M24 36L-8.49366e-07 36" stroke="var(--color-primary)" />
+            <path
+              d="M12 0V72"
+              stroke="var(--color-primary)"
+              stroke-width="0.7"
+            />
+            <path
+              d="M24 36L-8.49366e-07 36"
+              stroke="var(--color-primary)"
+              stroke-width="0.7"
+            />
           </svg>
         </div>
         <header className="grid grid-cols-[repeat(11,1fr)_auto] gap-x-[3.5vw] z-[100] fixed w-[93vw]">
@@ -77,8 +101,16 @@ const FixedContents = ({ children }: Props) => {
             fill="var(--color-primary)"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M12 0V72" stroke="var(--color-primary)" />
-            <path d="M24 36L-8.49366e-07 36" stroke="var(--color-primary)" />
+            <path
+              d="M12 0V72"
+              stroke="var(--color-primary)"
+              stroke-width="0.7"
+            />
+            <path
+              d="M24 36L-8.49366e-07 36"
+              stroke="var(--color-primary)"
+              stroke-width="0.7"
+            />
           </svg>
         </div>
       </div>

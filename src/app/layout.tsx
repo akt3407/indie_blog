@@ -7,6 +7,7 @@ import Menu from "./components/atoms/Menu";
 import Script from "next/script";
 import FixedContents from "./components/modules/FixedContents";
 import VersionText from "./components/atoms/VersionText";
+import CustomCursor from "./components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "BLooooG",
@@ -25,6 +26,7 @@ export default function RootLayout({
       suppressHydrationWarning={true}
     >
       <body className="font-primary">
+        <CustomCursor />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

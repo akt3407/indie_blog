@@ -57,3 +57,7 @@
 :root {
   font-size: clamp(10px, 1.111vw, 16px);
 }
+
+* {
+  cursor: none;
+}

@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <>
-      <h2 className="m-auto w-[30%] col-start-2 col-span-10">
+      <h2 className="m-auto h-[90vh] w-[30%] col-start-2 col-span-10">
         <svg
           width="100%"
           height="auto"

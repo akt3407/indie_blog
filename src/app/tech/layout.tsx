@@ -1,5 +1,3 @@
-import ThemeLogo from "../components/atoms/ThemeLogo";
-
 export const metadata = {
   title: "開発日記",
 };
@@ -12,7 +10,7 @@ export default function TechLayout({ children }: Props) {
   return (
     <>
       {children}
-      <ThemeLogo />
+      {/* <ThemeLogo /> */}
     </>
   );
 }
