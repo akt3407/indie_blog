@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { menuItems } from "@/data/menuItem";
 import { MenuItem } from "@/types/menu";
@@ -26,6 +26,11 @@ export default function Menu() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // ページ遷移時にメニューを閉じる
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
 
   // 外側をクリックした時にメニューが閉じる
   const handleOverlayClick = (e: React.MouseEvent) => {

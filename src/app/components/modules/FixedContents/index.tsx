@@ -27,12 +27,12 @@ const FixedContents = ({ children }: Props) => {
               <path
                 d="M12 0V72"
                 stroke="var(--color-primary)"
-                stroke-width="0.7"
+                strokeWidth="0.7"
               />
               <path
                 d="M24 36L-8.49366e-07 36"
                 stroke="var(--color-primary)"
-                stroke-width="0.7"
+                strokeWidth="0.7"
               />
             </svg>
           </div>
@@ -52,12 +52,12 @@ const FixedContents = ({ children }: Props) => {
               <path
                 d="M12 0V72"
                 stroke="var(--color-primary)"
-                stroke-width="0.7"
+                strokeWidth="0.7"
               />
               <path
                 d="M24 36L-8.49366e-07 36"
                 stroke="var(--color-primary)"
-                stroke-width="0.7"
+                strokeWidth="0.7"
               />
             </svg>
           </div>
@@ -79,12 +79,12 @@ const FixedContents = ({ children }: Props) => {
             <path
               d="M12 0V72"
               stroke="var(--color-primary)"
-              stroke-width="0.7"
+              strokeWidth="0.7"
             />
             <path
               d="M24 36L-8.49366e-07 36"
               stroke="var(--color-primary)"
-              stroke-width="0.7"
+              strokeWidth="0.7"
             />
           </svg>
         </div>
@@ -104,12 +104,12 @@ const FixedContents = ({ children }: Props) => {
             <path
               d="M12 0V72"
               stroke="var(--color-primary)"
-              stroke-width="0.7"
+              strokeWidth="0.7"
             />
             <path
               d="M24 36L-8.49366e-07 36"
               stroke="var(--color-primary)"
-              stroke-width="0.7"
+              strokeWidth="0.7"
             />
           </svg>
         </div>

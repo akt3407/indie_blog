@@ -19,6 +19,7 @@ export default function ThemeToggle() {
         className="block font-primary text-xxs text-primary tracking-[0.05rem] leading-none"
         title="Toggle theme"
         aria-label="Toggle theme"
+        data-cursor="Click"
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       >
         {theme === "dark" ? "Dark Mode" : "Light Mode"}

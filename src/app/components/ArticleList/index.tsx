@@ -3,7 +3,10 @@ import Link from "next/link";
 export default function ArticleList() {
   return (
     <>
-      <ul className="relative col-start-7 col-span-4 h-[150vh]">
+      <ul
+        data-cursor="Scroll"
+        className="relative col-start-7 col-span-4 h-[150vh]"
+      >
         <li className="py-6 pl-8 pr-8 border-t-1 border-b-1 border-[var(--color-border)]">
           <Link href="/nikki/1" className="block">
             <dl>
