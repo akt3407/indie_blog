@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { workSans, shipporiMincho, bodoniModa } from "./lib/fonts";
 import ThemeProvider from "@/theme/theme-provider";
+import Script from "next/script";
 
 import "./globals.css";
 import Menu from "./components/atoms/Menu";
-import Script from "next/script";
 import FixedContents from "./components/modules/FixedContents";
 import VersionText from "./components/atoms/VersionText";
 import CustomCursor from "./components/CustomCursor";

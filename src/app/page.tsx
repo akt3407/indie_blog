@@ -4,10 +4,7 @@ import "./globals.css";
 export default function Home() {
   return (
     <>
-      <div
-        data-cursor="NoScroll"
-        className="col-start-2 col-span-10 flex justify-center items-end relative top-[26vh] gap-[14.9vw] self-start"
-      >
+      <div className="col-start-2 col-span-10 flex justify-center items-end relative top-[26vh] gap-[14.9vw] self-start">
         <div className="w-[44.8vw] relative aspect-video">
           <Image
             src="/sample_img.jpg"

@@ -9,7 +9,16 @@ export default function VersionText() {
     return (
       <>
         <p className="col-start-1 col-span-2 text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none">
-          ( version_1.0.0 )
+          ( No Scrolling )
+        </p>
+      </>
+    );
+
+  if (pathname !== "/")
+    return (
+      <>
+        <p className="col-start-1 col-span-2 text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none">
+          ( Scrollable )
         </p>
       </>
     );

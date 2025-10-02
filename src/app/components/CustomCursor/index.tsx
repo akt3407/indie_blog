@@ -1,18 +1,17 @@
 "use client";
 
 import gsap from "gsap";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+
+interface CustomCursorElement extends HTMLElement {
+  _cursorListenerAttached: boolean;
+}
 
 const CustomCursor = () => {
-  const [cursorText, setCursorText] = useState("");
-
   useEffect(() => {
     const cursorFollower = document.querySelector(
       ".follower"
     ) as HTMLDivElement | null;
-    const cursorTextElement = document.querySelector(
-      ".cursor-text"
-    ) as HTMLSpanElement | null;
 
     document.body.style.cursor = "none";
 
@@ -20,7 +19,7 @@ const CustomCursor = () => {
       gsap.to(cursorFollower, {
         x: e.clientX,
         y: e.clientY,
-        duration: 0.3,
+        duration: 0.1,
         ease: "power2.out",
       });
     };
@@ -37,44 +36,27 @@ const CustomCursor = () => {
       const hoverElements = document.querySelectorAll("[data-cursor]");
 
       hoverElements.forEach((element) => {
-        if (!(element as any)._cursorListenerAttached) {
+        if (!(element as CustomCursorElement)._cursorListenerAttached) {
           const handleMouseEnter = () => {
-            const text = element.getAttribute("data-cursor") || "";
-            setCursorText(text);
             gsap.to(cursorFollower, {
-              scale: 1.5,
-              duration: 0.3,
+              scale: 2,
+              duration: 0.5,
               ease: "power2.out",
             });
-            // テキストを表示
-            if (cursorTextElement) {
-              gsap.to(cursorTextElement, {
-                opacity: 1,
-                duration: 0.2,
-              });
-            }
           };
 
           const handleMouseLeave = () => {
-            setCursorText("");
             gsap.to(cursorFollower, {
               scale: 1,
-              duration: 0.3,
+              duration: 0.5,
               ease: "power2.out",
             });
-            // テキストを非表示
-            if (cursorTextElement) {
-              gsap.to(cursorTextElement, {
-                opacity: 0,
-                duration: 0.2,
-              });
-            }
           };
 
           element.addEventListener("mouseenter", handleMouseEnter);
           element.addEventListener("mouseleave", handleMouseLeave);
 
-          (element as any)._cursorListenerAttached = true;
+          (element as CustomCursorElement)._cursorListenerAttached = true;
         }
       });
     };
@@ -101,11 +83,7 @@ const CustomCursor = () => {
 
   return (
     <div className="max-lg:hidden z-10">
-      <div className="follower w-[50px] h-[50px] rounded-full bg-white fixed z-50 mix-blend-difference pointer-events-none opacity-20 flex justify-center items-center">
-        <span className="cursor-text text-white mix-blend-difference text-xxs font-light opacity-20 whitespace-nowrap">
-          {cursorText}
-        </span>
-      </div>
+      <div className="follower w-[30px] h-[30px] rounded-full bg-white fixed z-50 mix-blend-difference pointer-events-none opacity-20 flex justify-center items-center"></div>
     </div>
   );
 };

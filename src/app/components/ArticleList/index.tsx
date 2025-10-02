@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function ArticleList() {
   return (
     <>
-      <ul
-        data-cursor="Scroll"
-        className="relative col-start-7 col-span-4 h-[150vh]"
-      >
-        <li className="py-6 pl-8 pr-8 border-t-1 border-b-1 border-[var(--color-border)]">
+      <ul className="relative col-start-7 col-span-4 h-[150vh]">
+        <li
+          data-cursor=""
+          className="py-6 pl-8 pr-8 border-t-1 border-b-1 border-[var(--color-border)]"
+        >
           <Link href="/nikki/1" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
@@ -24,7 +24,10 @@ export default function ArticleList() {
             </dl>
           </Link>
         </li>
-        <li className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]">
+        <li
+          data-cursor=""
+          className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]"
+        >
           <Link href="/nikki/1" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
@@ -41,7 +44,10 @@ export default function ArticleList() {
             </dl>
           </Link>
         </li>
-        <li className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]">
+        <li
+          data-cursor=""
+          className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]"
+        >
           <Link href="/nikki/1" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
@@ -58,7 +64,10 @@ export default function ArticleList() {
             </dl>
           </Link>
         </li>
-        <li className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]">
+        <li
+          data-cursor=""
+          className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]"
+        >
           <Link href="/nikki/1" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
@@ -75,7 +84,10 @@ export default function ArticleList() {
             </dl>
           </Link>
         </li>
-        <li className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]">
+        <li
+          data-cursor=""
+          className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]"
+        >
           <Link href="/nikki/1" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
@@ -92,7 +104,10 @@ export default function ArticleList() {
             </dl>
           </Link>
         </li>
-        <li className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]">
+        <li
+          data-cursor=""
+          className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]"
+        >
           <Link href="/nikki/1" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
@@ -109,7 +124,10 @@ export default function ArticleList() {
             </dl>
           </Link>
         </li>
-        <li className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]">
+        <li
+          data-cursor=""
+          className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]"
+        >
           <Link href="/nikki/1" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
@@ -126,7 +144,10 @@ export default function ArticleList() {
             </dl>
           </Link>
         </li>
-        <li className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]">
+        <li
+          data-cursor=""
+          className="py-6 pl-8 pr-8 border-b-1 border-[var(--color-border)]"
+        >
           <Link href="/nikki/1" className="block">
             <dl>
               <dt className="flex justify-start items-center gap-4">
