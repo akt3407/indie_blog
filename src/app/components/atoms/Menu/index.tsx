@@ -91,8 +91,9 @@ export default function Menu() {
           {isMenuOpen && (
             <>
               <div
+                data-cursor="Close"
                 ref={overlayRef}
-                className="fixed inset-0 bg-white/10 backdrop-blur-[3px] z-40"
+                className="fixed inset-0 bg-[var(--blur-color)] backdrop-blur-[3px] z-40"
                 onClick={() => setIsMenuOpen(false)} // 外側クリックで閉じる
               />
               <nav

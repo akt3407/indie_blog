@@ -12,6 +12,9 @@ const CustomCursor = () => {
     const cursorFollower = document.querySelector(
       ".follower"
     ) as HTMLDivElement | null;
+    const cursorTextElement = document.querySelector(
+      ".cursor-text"
+    ) as HTMLSpanElement | null;
 
     document.body.style.cursor = "none";
 
@@ -38,11 +41,19 @@ const CustomCursor = () => {
       hoverElements.forEach((element) => {
         if (!(element as CustomCursorElement)._cursorListenerAttached) {
           const handleMouseEnter = () => {
+            const text = element.getAttribute("data-cursor") || "";
             gsap.to(cursorFollower, {
               scale: 2,
               duration: 0.5,
               ease: "power2.out",
             });
+            // テキストを表示
+            if (cursorTextElement) {
+              gsap.to(cursorTextElement, {
+                opacity: 1,
+                duration: 0.5,
+              });
+            }
           };
 
           const handleMouseLeave = () => {
@@ -51,6 +62,13 @@ const CustomCursor = () => {
               duration: 0.5,
               ease: "power2.out",
             });
+            // テキストを非表示
+            if (cursorTextElement) {
+              gsap.to(cursorTextElement, {
+                opacity: 0,
+                duration: 0,
+              });
+            }
           };
 
           element.addEventListener("mouseenter", handleMouseEnter);

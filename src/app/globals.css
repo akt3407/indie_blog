@@ -8,6 +8,7 @@
   --color-text-primary: var(--text-color);
   --color-border: var(--border-color);
   --color-mh-white: rgba(255, 255, 255, 0.5);
+  --blur-color: var(--blur-color);
 
   /* Font Sizes */
   --text-xxs: 0.625rem; /* 10px */
@@ -32,12 +33,14 @@
     --color-primary: #e84f36;
     --text-color: #393939;
     --border-color: #cecece;
+    --blur-color: rgba(255, 255, 255, 0.3);
   }
   .dark {
     --background-color: #222222;
     --color-primary: #366be8;
     --text-color: #ffffff;
     --border-color: #555555;
+    --blur-color: rgba(0, 0, 0, 0.3);
   }
   img {
     width: 100%;
