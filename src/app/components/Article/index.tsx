@@ -33,7 +33,7 @@ export default function Article() {
           <h2 className="mt-4 text-lg font-quaternary text-[var(--color-text-primary)] leading-[1.7] tracking-[0.3rem] font-medium">
             中見出し
           </h2>
-          <p className="mt-4 text-sm font-quaternary text-[var(--color-text-primary)] leading-[1.7] tracking-[0.3rem] font-light [font-feature-settings:'palt'_1,'pwid'_1]">
+          <p className="mt-4 text-sm font-tertiary text-[var(--color-text-primary)] leading-[1.7] tracking-[0.3rem] font-light [font-feature-settings:'palt'_1,'pwid'_1]">
             本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
           </p>
         </div>

@@ -25,43 +25,53 @@ export default function Menu() {
   const isHome = pathname === "/";
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showOverlay, setShowOverlay] = useState(false); // 描画制御用
+  const [isAnimating, setIsAnimating] = useState(false);
   const overlayRef = useRef<HTMLDivElement | null>(null);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    if (isMenuOpen) {
+      // 閉じるアニメーション
+      setIsAnimating(true);
+      if (overlayRef.current) {
+        gsap.to(overlayRef.current, {
+          clipPath: "circle(0% at 100% 100%)",
+          duration: 1.0,
+          ease: "power2.in",
+          onComplete: () => {
+            setIsMenuOpen(false);
+            setIsAnimating(false);
+          },
+        });
+      } else {
+        setIsMenuOpen(false);
+        setIsAnimating(false);
+      }
+    } else {
+      // 開くアニメーション
+      setIsMenuOpen(true);
+    }
   };
 
   // ページ遷移時にメニューを閉じる
   useEffect(() => {
     setIsMenuOpen(false);
+    setIsAnimating(false);
   }, [pathname]);
 
-  // Overlay アニメーション
+  // Overlay アニメーション（開く時のみ）
   useEffect(() => {
-    if (!overlayRef.current) return;
+    if (!overlayRef.current || !isMenuOpen) return;
 
-    if (isMenuOpen) {
-      setShowOverlay(true); // 描画開始
-      // 開くとき
-      gsap.fromTo(
-        overlayRef.current,
-        { clipPath: "circle(0% at 100% 100%)" }, //右下から開始
-        {
-          clipPath: "circle(150% at 0% 0%)", // 左上まで広がる
-          duration: 1.2,
-          ease: "power2.out",
-        }
-      );
-    } else {
-      // 閉じる時
-      gsap.to(overlayRef.current, {
-        clipPath: "circle(0% at 100% 100%)",
-        duration: 0.8,
-        ease: "power2.in",
-        onComplete: () => setShowOverlay(false), // 完全に閉じたら非表示
-      });
-    }
+    // 開くとき
+    gsap.fromTo(
+      overlayRef.current,
+      { clipPath: "circle(0% at 100% 100%)" }, //右下から開始
+      {
+        clipPath: "circle(150% at 0% 0%)", // 左上まで広がる
+        duration: 1.2,
+        ease: "power2.out",
+      }
+    );
   }, [isMenuOpen]);
 
   return (
@@ -77,7 +87,7 @@ export default function Menu() {
         </nav>
       ) : (
         <>
-          {!isMenuOpen && (
+          {!isMenuOpen && !isAnimating && (
             <div className="col-start-12 ml-[0.97vw]">
               <button
                 data-cursor=""
@@ -88,24 +98,26 @@ export default function Menu() {
               </button>
             </div>
           )}
-          {isMenuOpen && (
+          {(isMenuOpen || isAnimating) && (
             <>
               <div
-                data-cursor="Close"
                 ref={overlayRef}
                 className="fixed inset-0 bg-[var(--blur-color)] backdrop-blur-[3px] z-40"
-                onClick={() => setIsMenuOpen(false)} // 外側クリックで閉じる
               />
-              <nav
-                className="col-start-6 col-span-7 ml-[0.97vw] flex items-end gap-[12vw] relative z-50"
-                onClick={(e) => e.stopPropagation()} // 内側クリックで閉じないr
-              >
-                <ul className="flex justify-center items-end gap-[12.9vw]">
+              <nav className="col-start-8 col-span-4 ml-[1rem] flex items-end gap-[3.625rem] relative z-50">
+                <ul className="flex justify-center items-end gap-[4.5rem]">
                   {menuItems.slice(0, 3).map(renderMenuItem)}
                 </ul>
                 <div className="list-none">
                   {menuItems[3] && renderMenuItem(menuItems[3])}
                 </div>
+                <button
+                  data-cursor=""
+                  className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5]"
+                  onClick={toggleMenu}
+                >
+                  CLOSE
+                </button>
               </nav>
             </>
           )}

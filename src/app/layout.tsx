@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { workSans, shipporiMincho, bodoniModa } from "./lib/fonts";
+import { workSans, shipporiMincho } from "./lib/fonts";
 import ThemeProvider from "@/theme/theme-provider";
 import Script from "next/script";
 
@@ -22,17 +22,12 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
-      className={`${workSans.variable} ${shipporiMincho.variable} ${bodoniModa.variable}`}
+      className={`${workSans.variable} ${shipporiMincho.variable}`}
       suppressHydrationWarning={true}
     >
-      <body className="font-primary">
+      <body className="font-primary ">
         <CustomCursor />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <FixedContents>
             <div className="grid grid-cols-12 gap-x-[3.5vw] w-[93vw]">
               {children}
