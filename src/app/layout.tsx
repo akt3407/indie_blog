@@ -25,7 +25,7 @@ export default function RootLayout({
       className={`${workSans.variable} ${shipporiMincho.variable}`}
       suppressHydrationWarning={true}
     >
-      <body className="font-primary ">
+      <body className="font-primary bg-bg">
         <CustomCursor />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <FixedContents>

@@ -15,17 +15,17 @@ export default function Home() {
           />
         </div>
         <div className="w-[17.2vw] relative ">
-          <p className="text-primary text-md leading-[1.1] font-medium">
+          <p className="text-primary text-md leading-[1.1] font-medium transition-colors duration-150">
             Dropping by...
             <br />
             Every now and then.
           </p>
-          <p className="text-primary text-xs ml-[1px] mt-[1.3vh] leading-[1.2]">
+          <p className="text-primary text-xs ml-[1px] mt-[1.3vh] leading-[1.2] transition-colors duration-150">
             Fonmani tamani shika Coshin
             <br />
             shinai kimagure nikki.
           </p>
-          <p className="text-primary text-xxs ml-[1px] mt-[2.5vh] leading-[0.715]">
+          <p className="text-primary text-xxs ml-[1px] mt-[2.5vh] leading-[0.715] transition-colors duration-150">
             0000 nikkies + 0000 techs + 0000 photos
           </p>
         </div>

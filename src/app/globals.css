@@ -27,7 +27,7 @@
 }
 
 @layer base {
-  .light {
+  :root {
     --background-color: #ececec;
     --color-primary: #e84f36;
     --text-color: #393939;
@@ -59,7 +59,7 @@ body {
   color: var(--text-color);
   font-size: clamp(10px, 1.111vw, 16px);
   transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 img {
@@ -70,4 +70,21 @@ img {
 
 * {
   cursor: none;
+}
+
+/* テーマ切替時の全体フェード用クラス（ふわっと切り替え） */
+.theme-changing,
+.theme-changing * {
+  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    fill 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-changing,
+  .theme-changing * {
+    transition: none !important;
+  }
 }

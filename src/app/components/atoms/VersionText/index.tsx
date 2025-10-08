@@ -8,7 +8,7 @@ export default function VersionText() {
   if (pathname === "/")
     return (
       <>
-        <p className="col-start-1 col-span-2 text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none">
+        <p className="col-start-1 col-span-2 text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none transition-colors duration-150">
           ( No Scrolling )
         </p>
       </>
@@ -17,7 +17,7 @@ export default function VersionText() {
   if (pathname !== "/")
     return (
       <>
-        <p className="col-start-1 col-span-2 text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none">
+        <p className="col-start-1 col-span-2 text-[var(--color-primary)] text-xs tracking-[0.05rem] leading-none transition-colors duration-150">
           ( Scrollable )
         </p>
       </>
