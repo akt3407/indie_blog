@@ -5,10 +5,10 @@
   /* Colors */
   --color-primary: var(--color-primary);
   --color-bg: var(--background-color);
-  --color-text-primary: var(--text-color);
+  --color-text: var(--text-color);
   --color-border: var(--border-color);
   --color-mh-white: rgba(255, 255, 255, 0.5);
-  --blur-color: var(--blur-color);
+  --color-blur: var(--blur-color);
 
   /* Font Sizes */
   --text-xxs: 0.625rem; /* 10px */
@@ -53,15 +53,6 @@
   }
 }
 
-html,
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-size: clamp(10px, 1.111vw, 16px);
-  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 img {
   width: 100%;
   height: auto;
@@ -76,7 +67,7 @@ img {
 .theme-changing,
 .theme-changing * {
   transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.1s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
     border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     fill 0.25s cubic-bezier(0.4, 0, 0.2, 1),
     stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1);

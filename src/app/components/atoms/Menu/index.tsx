@@ -14,7 +14,7 @@ export default function Menu() {
       <Link
         href={item.href}
         data-cursor=""
-        className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5] "
+        className="block text-primary text-base tracking-[0.05rem] leading-[0.5] "
       >
         {item.label}
       </Link>
@@ -91,7 +91,7 @@ export default function Menu() {
             <div className="col-start-12 ml-[0.97vw]">
               <button
                 data-cursor=""
-                className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5]"
+                className="block text-primary text-base tracking-[0.05rem] leading-[0.5]"
                 onClick={toggleMenu}
               >
                 MENU
@@ -102,7 +102,7 @@ export default function Menu() {
             <>
               <div
                 ref={overlayRef}
-                className="fixed inset-0 bg-[var(--blur-color)] backdrop-blur-[3px] z-40"
+                className="fixed inset-0 bg-blur backdrop-blur-[3px] z-40"
               />
               <nav className="col-start-8 col-span-4 ml-[1rem] flex items-end gap-[3.625rem] relative z-50">
                 <ul className="flex justify-center items-end gap-[4.5rem]">
@@ -113,7 +113,7 @@ export default function Menu() {
                 </div>
                 <button
                   data-cursor=""
-                  className="block text-[var(--color-primary)] text-base tracking-[0.05rem] leading-[0.5]"
+                  className="block text-primary text-base tracking-[0.05rem] leading-[0.5]"
                   onClick={toggleMenu}
                 >
                   CLOSE
