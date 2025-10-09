@@ -17,8 +17,8 @@ export const menuItems: MenuItem[] = [
     href: "/tech",
   },
   {
-    id: "photo",
-    label: "PHOTO",
-    href: "/photo",
+    id: "gallery",
+    label: "GALLERY",
+    href: "/gallery",
   },
 ];

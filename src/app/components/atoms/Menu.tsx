@@ -77,13 +77,11 @@ export default function Menu() {
   return (
     <>
       {isHome ? (
-        <nav className="col-start-6 col-span-7 ml-[0.97vw] flex items-end gap-[12vw]">
+        <nav className="col-start-6 col-span-7 ml-[0.97vw] flex items-end gap-[11vw]">
           <ul className="flex justify-center items-end gap-[12.9vw]">
             {menuItems.slice(0, 3).map(renderMenuItem)}
           </ul>
-          <div className="list-none">
-            {menuItems[3] && renderMenuItem(menuItems[3])}
-          </div>
+          <ul>{menuItems[3] && renderMenuItem(menuItems[3])}</ul>
         </nav>
       ) : (
         <>
@@ -104,13 +102,11 @@ export default function Menu() {
                 ref={overlayRef}
                 className="fixed inset-0 bg-blur backdrop-blur-[3px] z-40"
               />
-              <nav className="col-start-8 col-span-4 ml-[1rem] flex items-end gap-[3.625rem] relative z-50">
-                <ul className="flex justify-center items-end gap-[4.5rem]">
+              <nav className="col-start-8 col-span-4 ml-[-0.6vw] flex items-end gap-[4.5vw] relative z-50">
+                <ul className="flex justify-center items-end gap-[4.5vw]">
                   {menuItems.slice(0, 3).map(renderMenuItem)}
                 </ul>
-                <div className="list-none">
-                  {menuItems[3] && renderMenuItem(menuItems[3])}
-                </div>
+                <ul>{menuItems[3] && renderMenuItem(menuItems[3])}</ul>
                 <button
                   data-cursor=""
                   className="block text-primary text-base tracking-[0.05rem] leading-[0.5]"
