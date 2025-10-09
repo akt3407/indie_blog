@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 
 import ThemeToggle from "@/theme/theme-toggle";
-import HomeTitle from "../../atoms/HomeTitle";
+import HomeTitle from "../atoms/HomeTitle";
 
 type Props = {
   children: React.ReactNode;

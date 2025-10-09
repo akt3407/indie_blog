@@ -6,7 +6,7 @@ import Script from "next/script";
 import "./globals.css";
 import Menu from "./components/atoms/Menu";
 import FixedContents from "./components/modules/FixedContents";
-import VersionText from "./components/atoms/VersionText";
+import VersionText from "./components/atoms/FixedText";
 import CustomCursor from "./components/CustomCursor";
 
 export const metadata: Metadata = {
