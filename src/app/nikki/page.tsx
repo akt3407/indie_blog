@@ -1,7 +1,10 @@
 import Image from "next/image";
-import ArticleList from "../components/ArticleList";
+import ArticleList from "../_components/ArticleList";
+import { getBlogList } from "../_libs/microcms";
 
-export default function Page() {
+export default async function Page() {
+  const data = await getBlogList();
+
   return (
     <>
       <div className="col-start-1 col-span-6 ml-[4.58vw] relative top-[8.97vh] aspect-video w-[40.2w]">
@@ -14,7 +17,7 @@ export default function Page() {
         />
       </div>
       <div className="relative pt-[8.97vh] w-[40.2vw] h-[83vh] overflow-y-auto scrollbar-none">
-        <ArticleList />
+        <ArticleList blog={data.contents} />
       </div>
     </>
   );

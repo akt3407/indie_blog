@@ -51,6 +51,36 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+
+  /* テーマ切替時の全体フェード用クラス（ふわっと切り替え） */
+  .theme-changing,
+  .theme-changing * {
+    transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+      color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      fill 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+      stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .blog-content p {
+    margin-top: 16px;
+    font-size: 14px;
+    font-family: var(--font-tertiary);
+    color: var(--color-text);
+    line-height: 1.7;
+    letter-spacing: 0.3rem;
+    font-weight: var(--font-weight-light);
+    font-feature-settings: "palt" 1, "pwid" 1;
+  }
+  .blog-content h3 {
+    font-size: 20px;
+    font-family: var(--font-tertiary);
+    color: var(--color-text);
+    line-height: 1.7;
+    letter-spacing: 0.3rem;
+    font-weight: var(--font-weight-bold);
+    font-feature-settings: "palt" 1, "pwid" 1;
+  }
 }
 
 img {
@@ -61,16 +91,6 @@ img {
 
 * {
   cursor: none;
-}
-
-/* テーマ切替時の全体フェード用クラス（ふわっと切り替え） */
-.theme-changing,
-.theme-changing * {
-  transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    fill 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,4 +1,4 @@
-import ThemeLogo from "../components/atoms/ThemeLogo";
+import ThemeLogo from "../_components/atoms/ThemeLogo";
 
 export const metadata = {
   title: "nikki",

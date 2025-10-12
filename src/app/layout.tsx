@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { workSans, shipporiMincho } from "./lib/fonts";
+import { workSans, shipporiMincho } from "./_libs/fonts";
 import ThemeProvider from "@/theme/theme-provider";
 import Script from "next/script";
 
 import "./globals.css";
-import Menu from "./components/atoms/Menu";
-import FixedContents from "./components/modules/FixedContents";
-import VersionText from "./components/atoms/FixedText";
-import CustomCursor from "./components/CustomCursor";
+import Menu from "./_components/atoms/Menu";
+import FixedContents from "./_components/modules/FixedContents";
+import VersionText from "./_components/atoms/FixedText";
+import CustomCursor from "./_components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "BLooooG",
