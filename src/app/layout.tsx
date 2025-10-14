@@ -4,10 +4,10 @@ import ThemeProvider from "@/theme/theme-provider";
 import Script from "next/script";
 
 import "./globals.css";
-import Menu from "./_components/atoms/Menu";
 import FixedContents from "./_components/modules/FixedContents";
 import VersionText from "./_components/atoms/FixedText";
 import CustomCursor from "./_components/CustomCursor";
+import Menu from "./_components/Menu";
 
 export const metadata: Metadata = {
   title: "BLooooG",
