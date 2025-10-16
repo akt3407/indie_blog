@@ -22,7 +22,7 @@ export default function Menu() {
       <Link
         href={item.href}
         data-cursor=""
-        className="block text-primary text-base tracking-[0.05rem] leading-[0.5]"
+        className="block text-primary text-base tracking-[0.05rem] leading-[0.5] will-change-transform *:will-change-transform"
       >
         {item.label}
       </Link>
