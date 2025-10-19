@@ -33,18 +33,18 @@ export default function Menu() {
     if (isMenuOpen) {
       // 閉じるアニメーション
       setIsAnimating(true);
+      // 先にメニュー開閉フラグを閉じへ。DOMはisAnimatingで維持
+      setIsMenuOpen(false);
       if (overlayRef.current) {
         gsap.to(overlayRef.current, {
           clipPath: "circle(0% at 100% 100%)",
           duration: 1.0,
           ease: "power2.in",
           onComplete: () => {
-            setIsMenuOpen(false);
             setIsAnimating(false);
           },
         });
       } else {
-        setIsMenuOpen(false);
         setIsAnimating(false);
       }
     } else {

@@ -1,7 +1,6 @@
 "use client";
 import { RefObject, useEffect, useRef } from "react";
 import gsap from "gsap";
-import { SplitText } from "gsap/SplitText";
 
 import { MenuItem } from "@/types/menu";
 
@@ -25,25 +24,39 @@ export default function OverlayMenu({
   const navRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    if (!navRef.current || !isMenuOpen) return;
+    if (!navRef.current) return;
 
-    gsap.registerPlugin(SplitText);
+    const anchors = navRef.current.querySelectorAll<HTMLAnchorElement>("a");
+    if (!anchors.length) return;
 
-    const split = new SplitText(navRef.current, {
-      type: "lines",
-      linesClass: "block relative", // Tailwind で block + relative
-    });
+    // 既存トゥイーンを明示的に停止
+    gsap.killTweensOf(anchors);
 
-    gsap.from(split.lines, {
-      yPercent: 200,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 1.5,
-      ease: "expo.out",
-    });
-
-    return () => split.revert(); //クリーンアップ
-  }, [isMenuOpen]);
+    // 開く時
+    if (isMenuOpen) {
+      gsap.fromTo(
+        anchors,
+        { yPercent: 120, opacity: 0 },
+        {
+          yPercent: 0,
+          opacity: 1,
+          duration: 1.6,
+          stagger: 0.16,
+          ease: "expo.out",
+          clearProps: "transform,opacity",
+        }
+      );
+    } else if (isAnimating && !isMenuOpen) {
+      // 閉じる時（親がisAnimating=trueの間はDOMが残る）
+      gsap.to(Array.from(anchors).reverse(), {
+        yPercent: 120,
+        opacity: 0,
+        duration: 0.3,
+        stagger: 0.1,
+        ease: "expo.in",
+      });
+    }
+  }, [isMenuOpen, isAnimating]);
 
   return (
     <>
