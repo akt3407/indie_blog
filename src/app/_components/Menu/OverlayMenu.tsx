@@ -40,8 +40,9 @@ export default function OverlayMenu({
         {
           yPercent: 0,
           opacity: 1,
-          duration: 1.6,
-          stagger: 0.16,
+          duration: 2.2,
+          stagger: 0.2,
+          delay: 0.15,
           ease: "expo.out",
           clearProps: "transform,opacity",
         }
@@ -51,7 +52,7 @@ export default function OverlayMenu({
       gsap.to(Array.from(anchors).reverse(), {
         yPercent: 120,
         opacity: 0,
-        duration: 0.3,
+        duration: 0.4,
         stagger: 0.1,
         ease: "expo.in",
       });
