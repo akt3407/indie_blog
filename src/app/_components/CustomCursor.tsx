@@ -59,13 +59,13 @@ const CustomCursor = () => {
           const handleMouseLeave = () => {
             gsap.to(cursorFollower, {
               borderColor: "rgba(255,255,255,1)",
-              duration: 0.4,
+              duration: 0.1,
               ease: "power2.out",
             });
             gsap.to(cursorInner, {
               scale: 1,
               opacity: 1,
-              duration: 0.6,
+              duration: 0.2,
               ease: "power2.out",
             });
           };

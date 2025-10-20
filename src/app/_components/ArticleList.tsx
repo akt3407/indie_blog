@@ -6,9 +6,10 @@ import Date from "./atoms/Date";
 
 type Props = {
   blog: Blog[];
+  onHoverThumbnail: (thumbnail: Blog["thumbnail"] | null) => void;
 };
 
-export default async function ArticleList({ blog }: Props) {
+export default function ArticleList({ blog, onHoverThumbnail }: Props) {
   return (
     <>
       {!blog || blog.length === 0 ? (
@@ -20,6 +21,8 @@ export default async function ArticleList({ blog }: Props) {
               key={article.id}
               data-cursor=""
               className="py-6 pl-8 pr-8 border-t-1 border-b-1 border-border"
+              onMouseEnter={() => onHoverThumbnail(article.thumbnail)}
+              onMouseLeave={() => onHoverThumbnail(null)}
             >
               <Link href={`/nikki/${article.id}`} className="block">
                 <dl>
