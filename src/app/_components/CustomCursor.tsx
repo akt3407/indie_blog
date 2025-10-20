@@ -25,7 +25,7 @@ const CustomCursor = () => {
       gsap.to(cursorFollower, {
         x: e.clientX,
         y: e.clientY,
-        duration: 0.1,
+        duration: 0.4,
         ease: "power2.out",
       });
     };

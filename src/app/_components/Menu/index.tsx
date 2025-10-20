@@ -38,8 +38,8 @@ export default function Menu() {
       if (overlayRef.current) {
         gsap.to(overlayRef.current, {
           clipPath: "circle(0% at 100% 100%)",
-          duration: 1.0,
-          ease: "power2.in",
+          duration: 1,
+          ease: "sine.in",
           onComplete: () => {
             setIsAnimating(false);
           },
@@ -68,8 +68,8 @@ export default function Menu() {
       { clipPath: "circle(0% at 100% 100%)" },
       {
         clipPath: "circle(150% at 0% 0%)",
-        duration: 1.2,
-        ease: "power2.out",
+        duration: 1.5,
+        ease: "sine.out",
       }
     );
   }, [isMenuOpen]);
