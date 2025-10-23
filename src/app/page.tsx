@@ -1,19 +1,14 @@
-"use client";
-
 import Image from "next/image";
 
 import "./globals.css";
-import { useState } from "react";
 import Opening from "./_components/Opening";
 import VersionText from "./_components/atoms/FixedText";
 import Menu from "./_components/Menu";
 
 export default function Home() {
-  const [showOpening, setShowOpening] = useState(true);
-
   return (
     <>
-      {showOpening && <Opening />}
+      <Opening />
       <div className="col-start-2 col-span-10 flex justify-center items-end relative top-[26vh] gap-[14.9vw] self-start">
         <div className="w-[44.8vw] relative aspect-video">
           <Image
