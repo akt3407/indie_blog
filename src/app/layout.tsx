@@ -5,9 +5,8 @@ import Script from "next/script";
 
 import "./globals.css";
 import FixedContents from "./_components/modules/FixedContents";
-import VersionText from "./_components/atoms/FixedText";
 import CustomCursor from "./_components/CustomCursor";
-import Menu from "./_components/Menu";
+import FooterMenu from "./_components/modules/FooterMenu";
 
 export const metadata: Metadata = {
   title: "BLooooG",
@@ -33,10 +32,7 @@ export default function RootLayout({
               {children}
             </div>
           </FixedContents>
-          <div className="grid grid-cols-12 gap-x-[3.5vw] fixed justify-between items-end w-[93vw] bottom-[7.8vh] left-[3.47vw]">
-            <VersionText />
-            <Menu />
-          </div>
+          <FooterMenu />
         </ThemeProvider>
         <Script id="adobe-fonts" strategy="beforeInteractive">
           {`
