@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "GALLERY",
+  title: "ギャラリー",
 };
 
 type Props = {

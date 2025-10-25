@@ -6,7 +6,7 @@ export default function Page() {
           width="100%"
           height="auto"
           viewBox="0 0 1942 280"
-          fill="var(--color-text)"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
