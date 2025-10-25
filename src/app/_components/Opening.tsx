@@ -35,18 +35,16 @@ export default function Opening({ onComplete }: OpeningProps) {
     gsap.to(letters, {
       opacity: 1,
       ease: "sine.out",
-      duration: 3, // アニメーション速度（全体の速さ）
-      stagger: 0.3, // 各文字の遅延（調整ポイント）
+      duration: 1, // アニメーション速度（全体の速さ）
+      stagger: 0.2, // 各文字の遅延（調整ポイント）
       onComplete: () => {
-        console.log("文字アニメーション完了、背景フェードアウト開始");
         // 文字アニメーション完了後、背景全体をふわっと消す
         gsap.to(background, {
           opacity: 0,
-          duration: 1, // 3秒かけてゆっくり消す
+          duration: 1,
           ease: "power2.out",
-          delay: 1, // 2秒待ってから背景を消す
+          delay: 0,
           onComplete: () => {
-            console.log("背景フェードアウト完了");
             // カーソルを元に戻す
             document.body.style.cursor = "auto";
             const cursorFollower = document.querySelector(
@@ -115,7 +113,7 @@ export default function Opening({ onComplete }: OpeningProps) {
 
         {/* O（増殖する部分） */}
         {[...Array(5)].map((_, i) => (
-          <div key={i} className="letter w-[79px]">
+          <div key={i} className="letter w-[calc(79/16*1rem)]">
             <svg
               width="84"
               height="84"

@@ -9,13 +9,13 @@ type Props = {
   children: React.ReactNode;
 };
 
-const FixedContents = ({ children }: Props) => {
+const Header = ({ children }: Props) => {
   const pathname = usePathname();
 
   if (pathname === "/")
     return (
       <>
-        <div className="fixed bg-bg border-10 border-primary border-solid w-full h-svh px-[2.77vw] py-[6.4vh]">
+        <header className="fixed bg-bg border-10 border-primary border-solid w-full h-svh px-[2.77vw] py-[6.4vh]">
           <div className="absolute top-[45%] left-7">
             <svg
               width="24"
@@ -61,7 +61,7 @@ const FixedContents = ({ children }: Props) => {
               />
             </svg>
           </div>
-        </div>
+        </header>
       </>
     );
 
@@ -118,4 +118,4 @@ const FixedContents = ({ children }: Props) => {
   }
 };
 
-export default FixedContents;
+export default Header;

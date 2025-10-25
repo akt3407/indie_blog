@@ -121,8 +121,8 @@ const CustomCursor = () => {
   }, [pathname]); // 👈 ページが変わるたびに実行
 
   return (
-    <div className="max-lg:hidden z-10">
-      <div className="follower w-[40px] h-[40px] rounded-full border-[1.5px] border-mh-white fixed z-50 mix-blend-difference pointer-events-none opacity-20 flex justify-center items-center">
+    <div className="max-lg:hidden z-[60]">
+      <div className="follower w-[40px] h-[40px] rounded-full border-[1.5px] border-mh-white fixed z-[60] mix-blend-difference pointer-events-none opacity-20 flex justify-center items-center">
         <div className="follower-inner bg-mh-white w-[6px] h-[6px] rounded-full"></div>
       </div>
     </div>

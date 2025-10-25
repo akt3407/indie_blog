@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { workSans, shipporiMincho } from "./_libs/fonts";
 import ThemeProvider from "@/theme/theme-provider";
 import Script from "next/script";
-
 import "./globals.css";
+
 import FixedContents from "./_components/modules/FixedContents";
 import CustomCursor from "./_components/CustomCursor";
 import FooterMenu from "./_components/modules/FooterMenu";
+import ClientFadeIn from "./_components/ClientFadeIn";
 
 export const metadata: Metadata = {
   title: "BLooooG",
@@ -25,15 +26,17 @@ export default function RootLayout({
       suppressHydrationWarning={true}
     >
       <body className="font-primary text-primary bg-bg theme-changing">
-        <CustomCursor />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <FixedContents>
-            <div className="grid grid-cols-12 gap-x-[3.5vw] w-[93vw]">
-              {children}
-            </div>
-          </FixedContents>
-          <FooterMenu />
-        </ThemeProvider>
+        <ClientFadeIn>
+          <CustomCursor />
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <FixedContents>
+              <main className="grid grid-cols-12 gap-x-[3.5vw] w-[93vw]">
+                {children}
+              </main>
+            </FixedContents>
+            <FooterMenu />
+          </ThemeProvider>
+        </ClientFadeIn>
         <Script id="adobe-fonts" strategy="beforeInteractive">
           {`
             (function(d) {

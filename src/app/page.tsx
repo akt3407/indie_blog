@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import "./globals.css";
-import Opening from "./_components/Opening";
 import VersionText from "./_components/atoms/FixedText";
 import Menu from "./_components/Menu";
+import Opening from "./_components/Opening";
 
 export default function Home() {
   return (
