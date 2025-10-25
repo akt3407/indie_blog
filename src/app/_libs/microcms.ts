@@ -62,3 +62,12 @@ export const getContentCount = async (endpoint: string) => {
   });
   return listData.totalCount;
 };
+
+export const getStaticProps = async () => {
+  const blog = await getBlogList();
+
+  return {
+    props: { blog },
+    revalidate: 20, // 60秒ごとに再生成
+  };
+};
