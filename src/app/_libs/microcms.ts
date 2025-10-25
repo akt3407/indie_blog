@@ -54,3 +54,11 @@ export const getBlogDetail = async (
   });
   return detailData;
 };
+
+export const getContentCount = async (endpoint: string) => {
+  const listData = await client.getList({
+    endpoint,
+    queries: { limit: 0 },
+  });
+  return listData.totalCount;
+};

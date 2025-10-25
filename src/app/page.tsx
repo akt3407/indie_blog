@@ -4,8 +4,12 @@ import "./globals.css";
 import VersionText from "./_components/atoms/FixedText";
 import Menu from "./_components/Menu";
 import Opening from "./_components/Opening";
+import { getContentCount } from "./_libs/microcms";
 
-export default function Home() {
+export default async function Home() {
+  const nikkies = await getContentCount("blog");
+  const pad = (num: number) => String(num).padStart(4, "0");
+
   return (
     <>
       <Opening />
@@ -31,7 +35,7 @@ export default function Home() {
             shinai kimagure nikki.
           </p>
           <p className="text-primary text-xxs ml-[1px] mt-[2.5vh] leading-[0.715] transition-colors duration-150">
-            0000 nikkies + 0000 techs + 0000 photos
+            {pad(nikkies)} nikkies + 0000 techs + 0000 photos
           </p>
         </div>
         <div className="grid grid-cols-12 gap-x-[3.5vw] fixed justify-between items-end w-[93vw] bottom-[7.8vh] left-[3.47vw] z-50">
