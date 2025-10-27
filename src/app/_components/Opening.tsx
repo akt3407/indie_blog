@@ -19,7 +19,7 @@ export default function Opening({ onComplete }: OpeningProps) {
       setIsAnimation(false);
       return;
     }
-  });
+  }, []);
 
   useEffect(() => {
     const background = backgroundRef.current;
