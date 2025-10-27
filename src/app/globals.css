@@ -7,7 +7,7 @@
   --color-bg: var(--background-color);
   --color-text: var(--text-color);
   --color-border: var(--border-color);
-  --color-mh-white: rgba(255, 255, 255, 0.5);
+  --color-mh-white: rgba(255, 255, 255, 1);
   --color-blur: var(--blur-color);
 
   /* Font Sizes */
