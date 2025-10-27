@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 interface OpeningProps {
@@ -8,12 +8,18 @@ interface OpeningProps {
 }
 
 export default function Opening({ onComplete }: OpeningProps) {
+  const [isAnimation, setIsAnimation] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return !sessionStorage.getItem("visited");
+  });
+
   const containerRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const letters = containerRef.current?.querySelectorAll(".letter");
+    if (!isAnimation) return;
     const background = backgroundRef.current;
+    const letters = containerRef.current?.querySelectorAll(".letter");
 
     if (!letters || !background) return;
 
@@ -45,6 +51,8 @@ export default function Opening({ onComplete }: OpeningProps) {
           ease: "power2.out",
           delay: 0,
           onComplete: () => {
+            sessionStorage.setItem("visited", "true");
+            setIsAnimation(false);
             // カーソルを元に戻す
             document.body.style.cursor = "auto";
             const cursorFollower = document.querySelector(
@@ -71,7 +79,9 @@ export default function Opening({ onComplete }: OpeningProps) {
         cursorFollower.style.visibility = "";
       }
     };
-  }, [onComplete]);
+  }, [onComplete, isAnimation]);
+
+  if (!isAnimation) return null;
 
   return (
     <div
