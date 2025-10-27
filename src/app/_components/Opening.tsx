@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 interface OpeningProps {
@@ -8,75 +8,73 @@ interface OpeningProps {
 }
 
 export default function Opening({ onComplete }: OpeningProps) {
-  const [isAnimation, setIsAnimation] = useState(true);
+  const [isAnimation, setIsAnimation] = useState<boolean>(() => {
+    if (typeof window === "undefined") return true;
+    const hasVisited = sessionStorage.getItem("visited");
+    return !hasVisited;
+  });
   const containerRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    //visited判定(描画直前に行う)
-    const hasVisited = sessionStorage.getItem("visited");
-    if (hasVisited) {
-      setIsAnimation(false);
-      return;
-    }
-  }, []);
-
   useEffect(() => {
+    if (!isAnimation) return;
+
     const background = backgroundRef.current;
     const letters = containerRef.current?.querySelectorAll(".letter");
+
     if (!letters || !background) return;
+
+    // 最初は非表示
+    gsap.set(background, { opacity: 1 }); // 背景の初期状態を明示的に設定
+    gsap.set(letters, { opacity: 0, scale: 1, y: 20 });
 
     // Opening中はカーソルを非表示にする
     document.body.style.cursor = "none";
     const cursorFollower = document.querySelector(
       ".follower"
     ) as HTMLDivElement | null;
+
     if (cursorFollower) {
       cursorFollower.style.opacity = "0";
       cursorFollower.style.visibility = "hidden";
     }
 
-    // 最初は非表示
-    gsap.set(letters, { opacity: 0, scale: 1, y: 20 });
-    gsap.set(background, { opacity: 1 }); // 背景の初期状態を明示的に設定
-
     // 一文字ずつふわっと出現
-    gsap.to(letters, {
-      opacity: 1,
-      ease: "sine.out",
-      duration: 1, // アニメーション速度（全体の速さ）
-      stagger: 0.2, // 各文字の遅延（調整ポイント）
+    const tl = gsap.timeline({
+      defaults: { ease: "sine.out" },
       onComplete: () => {
-        // 文字アニメーション完了後、背景全体をふわっと消す
         gsap.to(background, {
           opacity: 0,
-          duration: 1,
+          duration: 1.5,
           ease: "power2.out",
-          delay: 0,
           onComplete: () => {
             sessionStorage.setItem("visited", "true");
             setIsAnimation(false);
-            // カーソルを元に戻す
+
+            // カーソルを戻す
             document.body.style.cursor = "auto";
-            const cursorFollower = document.querySelector(
-              ".follower"
-            ) as HTMLDivElement | null;
             if (cursorFollower) {
               cursorFollower.style.opacity = "";
               cursorFollower.style.visibility = "";
             }
-            onComplete?.(); // 親コンポーネントに完了を通知
+
+            onComplete?.();
           },
         });
       },
     });
 
+    // 文字をふわっと出す
+    tl.to(letters, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      stagger: 0.15,
+    });
+
     // クリーンアップ関数
     return () => {
       document.body.style.cursor = "auto";
-      const cursorFollower = document.querySelector(
-        ".follower"
-      ) as HTMLDivElement | null;
       if (cursorFollower) {
         cursorFollower.style.opacity = "";
         cursorFollower.style.visibility = "";
@@ -89,11 +87,11 @@ export default function Opening({ onComplete }: OpeningProps) {
   return (
     <div
       ref={backgroundRef}
-      className="fixed inset-0 flex justify-center items-center w-full h-screen bg-bg z-9999 border-10 border-primary border-solid pointer-events-none"
+      className="fixed inset-0 flex justify-center items-center w-full h-screen bg-bg z-[9999] border-10 border-primary border-solid pointer-events-none"
     >
       <div ref={containerRef} className="flex items-end space-x-1">
         {/* B */}
-        <div className="letter w-[100px]">
+        <div className="letter w-[100px] opacity-0 will-change-transform">
           <svg
             width="119"
             height="137"
@@ -109,7 +107,7 @@ export default function Opening({ onComplete }: OpeningProps) {
         </div>
 
         {/* L */}
-        <div className="letter w-[120px]">
+        <div className="letter w-[120px] opacity-0 will-change-transform">
           <svg
             width="123"
             height="137"
@@ -126,7 +124,10 @@ export default function Opening({ onComplete }: OpeningProps) {
 
         {/* O（増殖する部分） */}
         {[...Array(5)].map((_, i) => (
-          <div key={i} className="letter w-[calc(79/16*1rem)]">
+          <div
+            key={i}
+            className="letter w-[calc(79/16*1rem)] opacity-0 will-change-transform"
+          >
             <svg
               width="84"
               height="84"
@@ -143,7 +144,7 @@ export default function Opening({ onComplete }: OpeningProps) {
         ))}
 
         {/* G */}
-        <div className="letter w-[150px]">
+        <div className="letter w-[150px] opacity-0 will-change-transform">
           <svg
             width="151"
             height="137"
