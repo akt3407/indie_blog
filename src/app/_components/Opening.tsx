@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 interface OpeningProps {
@@ -8,19 +8,22 @@ interface OpeningProps {
 }
 
 export default function Opening({ onComplete }: OpeningProps) {
-  const [isAnimation, setIsAnimation] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false;
-    return !sessionStorage.getItem("visited");
-  });
-
+  const [isAnimation, setIsAnimation] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
   const backgroundRef = useRef<HTMLDivElement>(null);
 
+  useLayoutEffect(() => {
+    //visited判定(描画直前に行う)
+    const hasVisited = sessionStorage.getItem("visited");
+    if (hasVisited) {
+      setIsAnimation(false);
+      return;
+    }
+  }, []);
+
   useEffect(() => {
-    if (!isAnimation) return;
     const background = backgroundRef.current;
     const letters = containerRef.current?.querySelectorAll(".letter");
-
     if (!letters || !background) return;
 
     // Opening中はカーソルを非表示にする
@@ -79,7 +82,7 @@ export default function Opening({ onComplete }: OpeningProps) {
         cursorFollower.style.visibility = "";
       }
     };
-  }, [onComplete, isAnimation]);
+  }, [onComplete]);
 
   if (!isAnimation) return null;
 
