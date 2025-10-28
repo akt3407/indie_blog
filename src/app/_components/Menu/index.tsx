@@ -77,7 +77,11 @@ export default function Menu() {
   return (
     <>
       {isHome ? (
-        <HomeNav menuItems={menuItems} renderMenuItem={renderMenuItem} />
+        <HomeNav
+          menuItems={menuItems}
+          renderMenuItem={renderMenuItem}
+          onMenuClick={toggleMenu}
+        />
       ) : (
         <OverlayMenu
           menuItems={menuItems}

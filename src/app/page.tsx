@@ -13,8 +13,8 @@ export default async function Home() {
   return (
     <>
       <Opening />
-      <div className="col-start-2 col-span-10 flex justify-center items-end relative top-[26vh] gap-[14.9vw] self-start">
-        <div className="w-[44.8vw] relative aspect-video">
+      <div className="max-lg:flex max-lg:flex-col max-lg:gap-[5vw] max-lg:top-[20vh] max-lg:items-end flex col-start-2 col-span-10 justify-center items-end relative top-[26vh] gap-[14.9vw] self-start ">
+        <div className="max-lg:w-full w-[44.8vw] relative aspect-video ">
           <Image
             src="/sample_img.jpg"
             alt="mv"
@@ -23,8 +23,8 @@ export default async function Home() {
             loading="eager"
           />
         </div>
-        <div className="w-[17.2vw] relative ">
-          <p className="text-primary text-md leading-[1.1] font-medium transition-colors duration-150">
+        <div className="max-lg:w-[35%] w-[17.2vw] relative">
+          <p className="text-primary text-base leading-[1.1] font-medium transition-colors duration-150 xl:text-md">
             Dropping by...
             <br />
             Every now and then.
