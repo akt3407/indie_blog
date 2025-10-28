@@ -24,6 +24,9 @@
   --font-primary: var(--font-work-sans);
   --font-secondary: var(--font-shippori-mincho);
   --font-tertiary: "dnp-shuei-gothic-gin-std", "sans-serif";
+
+  /* Breakpoint */
+  --breakpoint-ssm: 28.125rem;
 }
 
 @layer base {

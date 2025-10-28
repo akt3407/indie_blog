@@ -59,7 +59,7 @@ export default function HomeNav({
 
   return (
     <>
-      <nav className="col-start-6 col-span-7 z-50 max-lg:col-start-12 max-lg:col-span-1 max-lg:ml-[-3vw]">
+      <nav className="col-start-6 col-span-7 z-50 max-lg:col-start-12 max-lg:col-span-1 max-lg:ml-[-3vw] max-sm:ml-[-4vw] max-ssm:ml-[-8vw]">
         <ul className="max-lg:hidden flex justify-between items-end max-lg:flex-col max-lg:justify-start max-lg:items-start">
           {menuItems.map(renderMenuItem)}
         </ul>
@@ -82,8 +82,8 @@ export default function HomeNav({
               className="fixed inset-0 bg-blur backdrop-blur-[3px] z-40"
             />
             <nav ref={navRef} className="col-start-7 col-span-4 relative z-50">
-              <div className="flex items-end gap-[4.5vw] max-lg:flex-col max-lg:mb-8">
-                <ul className="flex justify-center items-end gap-[4.5vw] max-lg:flex-col">
+              <div className="flex items-end gap-[4.5vw] max-lg:flex-col max-lg:mb-8 max-ssm:gap-[7vw] ">
+                <ul className="flex justify-center items-end gap-[4.5vw] max-lg:flex-col max-ssm:gap-[7vw]">
                   {menuItems.slice(0, 3).map(renderMenuItem)}
                 </ul>
                 <ul className="flex gap-[4.5vw] items-end">
@@ -93,7 +93,7 @@ export default function HomeNav({
             </nav>
             <button
               data-cursor=""
-              className="relative col-start-12 block text-primary text-base tracking-[0.05rem] leading-[0.5] z-50"
+              className="relative col-start-12 block text-primary text-base tracking-[0.05rem] leading-[0.5] z-50 max-ssm:ml-[-1vw]"
               onClick={toggleMenu}
             >
               CLOSE
