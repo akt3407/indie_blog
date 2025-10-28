@@ -16,7 +16,7 @@ const Header = ({ children }: Props) => {
     return (
       <>
         <div className="fixed bg-bg border-10 border-primary border-solid w-full h-svh px-[2.77vw] py-[6.4vh]">
-          <div className="absolute top-[45%] left-7 max-sm:left-2">
+          <div className="absolute top-[45%] left-7 max-sm:hidden">
             <svg
               width="24"
               height="72"
@@ -41,7 +41,7 @@ const Header = ({ children }: Props) => {
             <ThemeToggle />
           </header>
           {children}
-          <div className="absolute top-[45%] right-7 max-sm:right-2">
+          <div className="absolute top-[45%] right-7 max-sm:hidden">
             <svg
               width="24"
               height="72"
