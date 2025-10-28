@@ -15,7 +15,7 @@ const Header = ({ children }: Props) => {
   if (pathname === "/")
     return (
       <>
-        <div className="fixed bg-bg border-10 border-primary border-solid w-full h-svh px-[2.77vw] py-[6.4vh]">
+        <div className="fixed bg-bg border-10 border-primary border-solid w-full h-svh px-[2.77vw] py-[6.4vh] max-ssm:border-[5]">
           <div className="absolute top-[45%] left-7 max-sm:hidden">
             <svg
               width="24"
