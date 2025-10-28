@@ -47,7 +47,7 @@ export default function HomeNav({
       );
     } else if (isAnimating && !isMenuOpen) {
       // 閉じる時（親がisAnimating=trueの間はDOMが残る）
-      gsap.to(Array.from(anchors).reverse(), {
+      gsap.to(Array.from(anchors), {
         yPercent: 120,
         opacity: 0,
         duration: 0.4,
