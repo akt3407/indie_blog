@@ -12,7 +12,7 @@ export default function HomeTitle() {
   return (
     <>
       {isHome ? (
-        <div className="max-lg:col-start-3 max-lg:ml-[3.5vw] max-lg:mt-[3vh] max-lg:w-[71vw] col-start-1 mt-0 col-span-7 w-[54.7vw]">
+        <div className="max-lg:col-start-3  max-lg:mt-[3vh] max-lg:w-[71vw] col-start-1 mt-0 col-span-7 w-[54.7vw]">
           <svg
             width="100%"
             height="auto"

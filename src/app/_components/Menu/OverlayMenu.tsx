@@ -8,8 +8,8 @@ type Props = {
   menuItems: MenuItem[];
   renderMenuItem: (item: MenuItem) => React.ReactNode;
   isMenuOpen: boolean;
-  isAnimating: boolean;
   toggleMenu: () => void;
+  isAnimating: boolean;
   overlayRef: RefObject<HTMLDivElement | null>;
 };
 

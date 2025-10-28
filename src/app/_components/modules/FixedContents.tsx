@@ -36,7 +36,7 @@ const Header = ({ children }: Props) => {
               />
             </svg>
           </div>
-          <header className="grid grid-cols-[repeat(11,1fr)_auto] gap-x-[3.5vw] z-[100] fixed w-[93vw]">
+          <header className="grid grid-cols-[repeat(11,1fr)_auto] gap-x-[3.5vw] fixed w-[93vw]">
             <HomeTitle />
             <ThemeToggle />
           </header>

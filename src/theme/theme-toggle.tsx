@@ -14,7 +14,7 @@ export default function ThemeToggle() {
   }
 
   return (
-    <div className="max-lg:col-start-10 max-lg:col-span-4 max-lg:ml-[-1vw] max-lg:w-fit col-start-12 col-span-1">
+    <div className="max-lg:col-start-11 max-lg:col-span-4 max-lg:ml-[-1vw] max-lg:w-fit col-start-12 col-span-1">
       <button
         type="button"
         className="block font-primary text-xxs text-primary tracking-[0.05rem] leading-none"

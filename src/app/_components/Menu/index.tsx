@@ -80,7 +80,10 @@ export default function Menu() {
         <HomeNav
           menuItems={menuItems}
           renderMenuItem={renderMenuItem}
-          onMenuClick={toggleMenu}
+          isAnimating={isAnimating}
+          overlayRef={overlayRef}
+          toggleMenu={toggleMenu}
+          isMenuOpen={isMenuOpen}
         />
       ) : (
         <OverlayMenu
