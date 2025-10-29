@@ -67,7 +67,7 @@ export default function HomeNav({
         {!isMenuOpen && !isAnimating && (
           <div className="lg:hidden">
             <button
-              className="text-primary text-base tracking-[0.05rem] leading-[0.5] block max-ssm:ml-[-1vw]"
+              className="text-primary text-base tracking-[0.05rem] leading-[0.5] block max-ssm:"
               onClick={toggleMenu}
             >
               MENU

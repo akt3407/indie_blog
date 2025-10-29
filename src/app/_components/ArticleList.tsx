@@ -20,7 +20,7 @@ export default function ArticleList({ blog, onHoverThumbnail }: Props) {
             <li
               key={article.id}
               data-cursor=""
-              className="py-6 pl-8 pr-8 border-t-1 border-b-1 border-border"
+              className="py-6 px-8 border-t-1 border-b-1 border-border max-lg:py-4 max-lg:px-6"
               onMouseEnter={() => onHoverThumbnail(article.thumbnail)}
               onMouseLeave={() => onHoverThumbnail(null)}
             >

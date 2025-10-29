@@ -62,7 +62,7 @@ export default function OverlayMenu({
   return (
     <>
       {!isMenuOpen && !isAnimating && (
-        <div className="col-start-12 ml-[0.97vw] static max-md:fixed">
+        <div className="col-start-12 justify-self-end static max-md:fixed">
           <button
             data-cursor=""
             className="button block text-primary text-base tracking-[0.05rem] leading-[0.5]"

@@ -16,7 +16,7 @@ const Header = ({ children }: Props) => {
     return (
       <>
         <div className="fixed bg-bg border-10 border-primary border-solid w-full h-svh px-[2.77vw] py-[6.4vh] max-ssm:border-[5]">
-          <div className="absolute top-[45%] left-7 max-sm:hidden">
+          <div className="absolute top-[45%] left-[1.5vw] max-sm:hidden">
             <svg
               width="24"
               height="72"
@@ -36,12 +36,12 @@ const Header = ({ children }: Props) => {
               />
             </svg>
           </div>
-          <header className="grid grid-cols-[repeat(11,1fr)_auto] gap-x-[3.5vw] fixed w-[93vw]">
+          <header className="grid grid-cols-12 gap-x-[3.5vw] fixed w-[93vw]">
             <HomeTitle />
             <ThemeToggle />
           </header>
           {children}
-          <div className="absolute top-[45%] right-7 max-sm:hidden">
+          <div className="absolute top-[45%] right-[1.5vw] max-sm:hidden">
             <svg
               width="24"
               height="72"
@@ -68,7 +68,7 @@ const Header = ({ children }: Props) => {
   if (pathname !== "/") {
     return (
       <div className="fixed bg-bg w-full h-svh px-[3.47vw] py-[7.69vh]">
-        <div className="absolute top-[45.1%] left-9.5">
+        <div className="absolute top-[45.1%] left-[2.5vw]">
           <svg
             width="24"
             height="72"
@@ -88,12 +88,12 @@ const Header = ({ children }: Props) => {
             />
           </svg>
         </div>
-        <header className="grid grid-cols-[repeat(11,1fr)_auto] gap-x-[3.5vw] z-[100] fixed w-[93vw]">
+        <header className="grid grid-cols-12 gap-x-[3.5vw] justify-between z-[100] fixed w-[93vw]">
           <HomeTitle />
           <ThemeToggle />
         </header>
         {children}
-        <div className="absolute top-[45.1%] right-9.5">
+        <div className="absolute top-[45.1%] right-[2.5vw]">
           <svg
             width="24"
             height="72"

@@ -55,7 +55,7 @@ export default function HomeTitle() {
           </svg>
         </div>
       ) : (
-        <div className="col-start-1 col-span-1 w-[6.74vw]">
+        <div className="col-start-1 col-span-2 w-[6.74vw]">
           <Link data-cursor="" href="/">
             <svg
               width="97"

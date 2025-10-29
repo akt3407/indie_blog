@@ -93,7 +93,7 @@ img {
 }
 
 * {
-  /* cursor: none; */
+  cursor: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

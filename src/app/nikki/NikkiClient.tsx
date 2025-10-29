@@ -32,7 +32,7 @@ export default function NikkiClient({ data }: Props) {
 
   return (
     <>
-      <div className="thumbnail col-start-1 col-span-6 ml-[4.58vw] relative top-[8.97vh] aspect-video w-[40.2w]">
+      <div className="thumbnail col-start-1 col-span-6 ml-[4.58vw] relative top-[8.97vh] aspect-video w-[40.2w] max-lg:hidden">
         {hoveredThumbnail ? (
           <Image
             src={hoveredThumbnail.url}
@@ -42,10 +42,10 @@ export default function NikkiClient({ data }: Props) {
             loading="lazy"
           />
         ) : (
-          <div className="w-[579px] h-[327px] bg-transparent" />
+          <div className="w-[40.2w] h-full bg-transparent" />
         )}
       </div>
-      <div className="relative pt-[8.97vh] w-[40.2vw] h-[83vh] overflow-y-auto scrollbar-none">
+      <div className="relative pt-[8.97vh] w-[40.2vw] h-[83vh] overflow-y-auto scrollbar-none max-lg:w-[93vw]">
         <ArticleList
           blog={data.contents}
           onHoverThumbnail={handleThumbnailHover}

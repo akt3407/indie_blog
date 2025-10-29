@@ -24,7 +24,7 @@ export default async function Home() {
             loading="eager"
           />
         </div>
-        <div className="max-lg:w-[35%] w-[17.2vw] relative max-sm:w-[63%] max-ssm:w-[68%]">
+        <div className="max-lg:w-[35%] w-[17.2vw] relative max-sm:w-[63%] max-ssm:w-[61%]">
           <p className="text-primary text-base leading-[1.1] font-medium transition-colors duration-150 xl:text-md">
             Dropping by...
             <br />
