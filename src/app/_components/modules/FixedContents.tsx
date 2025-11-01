@@ -15,7 +15,7 @@ const Header = ({ children }: Props) => {
   if (pathname === "/")
     return (
       <>
-        <div className="fixed bg-bg border-10 border-primary border-solid w-full h-svh px-[2.77vw] py-[6.4vh] max-ssm:border-[5]">
+        <div className="fixed bg-bg border-10 border-primary border-solid w-full h-svh px-[2.77vw] py-[6.4vh] max-ssm:border-[5] max-sm:pb-[3.4vh]">
           <div className="absolute top-[45%] left-[1.5vw] max-sm:hidden">
             <svg
               width="24"
@@ -67,7 +67,7 @@ const Header = ({ children }: Props) => {
 
   if (pathname !== "/") {
     return (
-      <div className="fixed bg-bg w-full h-svh px-[3.47vw] py-[7.69vh]">
+      <div className="fixed bg-bg w-full h-svh px-[3.47vw] py-[7.69vh] max-sm:pb-[3.4vh]">
         <div className="absolute top-[45.1%] left-[2.5vw] max-sm:hidden">
           <svg
             width="24"

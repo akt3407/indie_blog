@@ -38,7 +38,7 @@ export default async function Home() {
             {pad(nikkies)} nikkies + 0000 techs + 0000 photos
           </p>
         </div>
-        <div className="grid grid-cols-12 gap-x-[3.5vw] fixed justify-between items-end w-[93vw] bottom-[7.8vh] left-[3.47vw] z-50">
+        <div className="grid grid-cols-12 gap-x-[3.5vw] fixed justify-between items-end w-[93vw] bottom-[7.8vh] left-[3.47vw] z-50 max-sm:bottom-[3.4vh]">
           <FixedText />
           <Menu />
         </div>
