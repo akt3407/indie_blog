@@ -30,8 +30,8 @@ export default function ArticleList({ blog, onHoverThumbnail }: Props) {
                     <Date date={article.publishedAt ?? article.createdAt} />
                     <Category category={article.category} />
                   </dt>
-                  <dd className="mt-4">
-                    <p className="text-md text-text font-secondary leading-[1.6] tracking-[0.2rem] truncate">
+                  <dd className="mt-4 max-sm:mt-3">
+                    <p className="text-md text-text font-secondary leading-[1.6] tracking-[0.2rem] truncate max-lg:text-base">
                       {article.title}
                     </p>
                   </dd>

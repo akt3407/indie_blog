@@ -68,7 +68,7 @@ const Header = ({ children }: Props) => {
   if (pathname !== "/") {
     return (
       <div className="fixed bg-bg w-full h-svh px-[3.47vw] py-[7.69vh]">
-        <div className="absolute top-[45.1%] left-[2.5vw]">
+        <div className="absolute top-[45.1%] left-[2.5vw] max-sm:hidden">
           <svg
             width="24"
             height="72"
@@ -93,7 +93,7 @@ const Header = ({ children }: Props) => {
           <ThemeToggle />
         </header>
         {children}
-        <div className="absolute top-[45.1%] right-[2.5vw]">
+        <div className="absolute top-[45.1%] right-[2.5vw] max-sm:hidden">
           <svg
             width="24"
             height="72"

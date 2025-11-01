@@ -17,7 +17,7 @@ export default function FixedText() {
   if (pathname !== "/")
     return (
       <>
-        <p className="col-start-1 col-span-2 text-primary text-xs tracking-[0.05rem] leading-none transition-colors duration-150 max-sm:col-span-2 max-sm:ml-[1vw] max-ssm:col-span-4">
+        <p className="col-start-1 col-span-2 text-primary text-xs tracking-[0.05rem] leading-none transition-colors duration-150 max-sm:col-span-3 max-sm:ml-[1vw] max-ssm:col-span-5">
           ( Scrollable )
         </p>
       </>
