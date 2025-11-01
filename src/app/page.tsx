@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import "./globals.css";
-import VersionText from "./_components/atoms/FixedText";
 import Menu from "./_components/Menu";
 import Opening from "./_components/Opening";
 import { getContentCount } from "./_libs/microcms";
