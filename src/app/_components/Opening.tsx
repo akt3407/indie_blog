@@ -87,7 +87,7 @@ export default function Opening({ onComplete }: OpeningProps) {
   return (
     <div
       ref={backgroundRef}
-      className="fixed inset-0 flex justify-center items-center w-full max-h-screen bg-bg z-[9999] border-10 border-primary border-solid pointer-events-none max-sm:h-[94vh] max-sm:border-[5]"
+      className="fixed inset-0 flex justify-center items-center w-full max-h-screen bg-bg z-[9999] border-10 border-primary border-solid pointer-events-none max-sm:h-[94.5vh] max-sm:border-[5]"
     >
       <div ref={containerRef} className="flex items-end justify-center">
         {/* B */}
