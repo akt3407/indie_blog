@@ -7,7 +7,7 @@ export default function ThemeLogo() {
 
   if (pathname === "/nikki") {
     return (
-      <div className="col-start-1 col-span-6 sticky bottom-[10vh] self-start w-[46.3vw]">
+      <div className="col-start-1 col-span-6 sticky bottom-[10vh] self-start w-[46.3vw] max-sm:bottom-[5.3vh]">
         <svg
           width="100%"
           height="auto"
@@ -44,7 +44,7 @@ export default function ThemeLogo() {
 
   if (pathname.startsWith("/nikki")) {
     return (
-      <div className="col-start-1 col-span-3 sticky bottom-[10vh] self-start w-[26.3vw] max-lg:hidden">
+      <div className="col-start-1 col-span-3 sticky bottom-[9vh] self-start w-[26.3vw] max-lg:hidden">
         <svg
           width="100%"
           height="auto"

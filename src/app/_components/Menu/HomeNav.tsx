@@ -67,7 +67,7 @@ export default function HomeNav({
         {!isMenuOpen && !isAnimating && (
           <div className="lg:hidden">
             <button
-              className="text-primary text-base tracking-[0.05rem] leading-[0.5] block max-ssm:"
+              className="text-primary text-base tracking-[0.05rem] leading-[0.5] block"
               onClick={toggleMenu}
             >
               MENU
@@ -93,7 +93,7 @@ export default function HomeNav({
             </nav>
             <button
               data-cursor=""
-              className="relative col-start-12 block text-primary text-base tracking-[0.05rem] leading-[0.5] z-50 max-ssm:ml-[-2vw]"
+              className="relative col-start-12 block text-primary text-base tracking-[0.05rem] leading-[0.5] z-50 max-ssm:ml-[-1vw]"
               onClick={toggleMenu}
             >
               CLOSE

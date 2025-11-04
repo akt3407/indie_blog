@@ -2,7 +2,7 @@ export default function Page() {
   return (
     <>
       {/* <TechList /> */}
-      <h2 className="m-auto h-[90vh] w-[30%] col-start-2 col-span-10">
+      <h2 className="m-auto h-[90vh] w-[30%] col-start-2 col-span-10 max-sm:w-full">
         <svg
           width="100%"
           height="auto"

@@ -89,12 +89,12 @@ export default function Opening({ onComplete }: OpeningProps) {
       ref={backgroundRef}
       className="fixed inset-0 flex justify-center items-center w-full h-screen bg-bg z-[9999] border-10 border-primary border-solid pointer-events-none max-sm:border-[5]"
     >
-      <div ref={containerRef} className="flex items-end space-x-1">
+      <div ref={containerRef} className="flex items-end justify-center">
         {/* B */}
-        <div className="letter w-[100px] opacity-0 will-change-transform">
+        <div className="letter w-[7.3rem] opacity-0 will-change-transform max-lg:w-[4rem] max-ssm:w-[2.5rem]">
           <svg
-            width="119"
-            height="137"
+            width="100%"
+            height="100%"
             viewBox="0 0 119 137"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -107,10 +107,10 @@ export default function Opening({ onComplete }: OpeningProps) {
         </div>
 
         {/* L */}
-        <div className="letter w-[120px] opacity-0 will-change-transform">
+        <div className="letter w-[7.5rem] opacity-0 will-change-transform max-lg:w-[4rem] max-ssm:w-[2.5rem]">
           <svg
-            width="123"
-            height="137"
+            width="100%"
+            height="100%"
             viewBox="0 0 123 137"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -126,11 +126,11 @@ export default function Opening({ onComplete }: OpeningProps) {
         {[...Array(5)].map((_, i) => (
           <div
             key={i}
-            className="letter w-[calc(79/16*1rem)] opacity-0 will-change-transform"
+            className="letter w-[4.9375rem] opacity-0 will-change-transform max-lg:w-[3rem] max-ssm:w-[1.75rem]"
           >
             <svg
-              width="84"
-              height="84"
+              width="100%"
+              height="100%"
               viewBox="0 0 84 84"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -144,10 +144,10 @@ export default function Opening({ onComplete }: OpeningProps) {
         ))}
 
         {/* G */}
-        <div className="letter w-[150px] opacity-0 will-change-transform">
+        <div className="letter w-[9.375rem] opacity-0 will-change-transform max-lg:w-[4.5rem] max-ssm:w-[2.75rem]">
           <svg
-            width="151"
-            height="137"
+            width="100%"
+            height="100%"
             viewBox="0 0 151 137"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

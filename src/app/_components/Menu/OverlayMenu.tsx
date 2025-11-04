@@ -81,10 +81,10 @@ export default function OverlayMenu({
           />
           <nav
             ref={navRef}
-            className="col-start-7 col-span-4 ml-[7.5vw]  relative z-50"
+            className="col-start-7 col-span-4 ml-[7.5vw]  relative z-50 max-sm:col-start-12"
           >
-            <div className="flex items-end gap-[4.5vw]">
-              <ul className="flex justify-center items-end gap-[4.5vw]">
+            <div className="flex items-end gap-[4.5vw] max-lg:flex-col max-lg:mb-8 max-ssm:gap-[7vw]">
+              <ul className="flex justify-center items-end gap-[4.5vw] max-lg:flex-col max-ssm:gap-[7vw]">
                 {menuItems.slice(0, 3).map(renderMenuItem)}
               </ul>
               <ul className="flex gap-[4.5vw] items-end">

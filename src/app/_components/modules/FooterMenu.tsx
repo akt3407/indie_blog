@@ -14,7 +14,7 @@ export default function FooterMenu() {
 
   return (
     <>
-      <div className="grid grid-cols-12 gap-x-[3.5vw] fixed justify-between items-end w-[93vw] bottom-[7.8vh] left-[3.47vw] z-50">
+      <div className="grid grid-cols-12 gap-x-[3.5vw] fixed justify-between items-end w-[93vw] bottom-[7.8vh] left-[3.47vw] z-50 max-sm:bottom-[3.4vh]">
         <VersionText />
         <Menu />
       </div>
