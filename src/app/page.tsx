@@ -16,7 +16,7 @@ export default async function Home() {
       <div className="max-lg:flex max-lg:flex-col max-lg:gap-[5vw] max-lg:top-[20vh] max-lg:items-end flex col-start-2 col-span-10 justify-center items-end relative top-[26vh] gap-[14.9vw] self-start max-sm:ml-[-2vw]">
         <div className="max-lg:w-full w-[44.8vw] relative aspect-video">
           <Image
-            src="/sample_img.jpg"
+            src="/sample.jpg"
             alt="mv"
             width={645}
             height={362}
